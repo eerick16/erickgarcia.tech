@@ -1,4 +1,5 @@
 import { Navbar } from "./components/common/Navbar"
+import { useLenis } from "./hooks/useLenis"
 import { HeroSection } from "./sections/HeroSection"
 import { AboutSection } from "./sections/AboutSection"
 import { ExperienceSection } from "./sections/ExperienceSection"
@@ -8,6 +9,8 @@ import { PhilosophySection } from "./sections/PhilosophySection"
 import { ContactSection } from "./sections/ContactSection"
 
 function App() {
+  useLenis()
+
   return (
     <>
     

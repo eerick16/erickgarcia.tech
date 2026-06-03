@@ -53,7 +53,7 @@ export function ProjectsSection() {
               Projects
             </p>
 
-            <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="font-display max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
               Selected work built for real users and real business needs.
             </h2>
           </div>

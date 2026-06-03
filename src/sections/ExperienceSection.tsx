@@ -45,7 +45,7 @@ export function ExperienceSection() {
             Experience
           </p>
 
-          <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+          <h2 className="font-display max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
             From academic foundations to production-ready systems.
           </h2>
         </motion.div>

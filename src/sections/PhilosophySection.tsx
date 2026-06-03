@@ -50,7 +50,7 @@ export function PhilosophySection() {
             Philosophy
           </p>
 
-          <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+          <h2 className="font-display max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
             How I approach software development.
           </h2>
 

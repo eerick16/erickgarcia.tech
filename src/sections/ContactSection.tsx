@@ -21,7 +21,7 @@ export function ContactSection() {
                 Contact
               </p>
 
-              <h2 className="max-w-3xl text-4xl font-black tracking-tight md:text-6xl">
+              <h2 className="font-display max-w-3xl text-4xl font-black tracking-tight md:text-6xl">
                 Let&apos;s build something that actually works.
               </h2>
 

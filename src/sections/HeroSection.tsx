@@ -25,11 +25,11 @@ export function HeroSection() {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="mt-2"
         >
-            <h1 className="text-5xl font-black tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
+            <h1 className="font-display text-5xl font-black tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
                 Erick Alvarado
             </h1>
 
-            <h1 className="bg-gradient-to-r from-[#00F5D4] via-white to-[#8B5CF6] bg-clip-text text-5xl font-black tracking-tight text-transparent sm:text-7xl md:text-8xl lg:text-9xl">
+            <h1 className="font-display bg-gradient-to-r from-[#00F5D4] via-white to-[#8B5CF6] bg-clip-text text-5xl font-black tracking-tight text-transparent sm:text-7xl md:text-8xl lg:text-9xl">
                 García
             </h1>
         </motion.div>
@@ -38,7 +38,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="mt-8 max-w-5xl text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl md:text-5xl"
+            className="font-display mt-8 max-w-5xl text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl md:text-5xl"
         >
             Building digital products that{" "}
             <span className="text-[#00F5D4]">

@@ -116,7 +116,7 @@ export function StackSection() {
               Tech Stack
             </p>
 
-            <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="font-display max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
               Technologies I use to design, build and ship software.
             </h2>
           </div>
