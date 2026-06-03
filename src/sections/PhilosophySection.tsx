@@ -1,4 +1,5 @@
-import { motion } from "motion/react"
+import { Reveal } from "../components/common/Reveal"
+import { RevealCard } from "../components/common/RevealCard"
 import {
   Gauge,
   Users,
@@ -40,17 +41,12 @@ export function PhilosophySection() {
       className="bg-[#09090B] px-6 py-32 text-white"
     >
       <div className="mx-auto max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
+        <Reveal>
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
             Philosophy
           </p>
 
-          <h2 className="font-display max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+          <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
             How I approach software development.
           </h2>
 
@@ -59,36 +55,35 @@ export function PhilosophySection() {
             building quality software remain the same. These ideas guide
             the way I design, develop and improve every project.
           </p>
-        </motion.div>
+        </Reveal>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2">
           {principles.map((principle, index) => {
             const Icon = principle.icon
 
             return (
-              <motion.article
+              <RevealCard
                 key={principle.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                }}
-                className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition hover:border-[#00F5D4]/40 hover:bg-white/[0.07]"
+                delay={index * 0.1}
+                className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#00F5D4]/10 text-[#00F5D4] transition group-hover:bg-[#00F5D4]/20">
+                <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#00F5D4]/50 to-transparent" />
+                <div className="absolute -top-16 right-8 h-28 w-28 rounded-full bg-[#00F5D4]/10 blur-3xl" />
+
+                <div className="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#00F5D4]/10 text-[#00F5D4]">
                   <Icon size={28} />
                 </div>
 
-                <h3 className="text-2xl font-bold">
+                <h3 className="relative text-2xl font-bold">
                   {principle.title}
                 </h3>
 
-                <p className="mt-4 leading-8 text-zinc-400">
+                <p className="relative mt-4 leading-8 text-zinc-400">
                   {principle.description}
                 </p>
-              </motion.article>
+                <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#00F5D4]/60 to-transparent" />
+                <div className="absolute -top-20 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-[#00F5D4]/10 blur-3xl" />
+              </RevealCard>
             )
           })}
         </div>

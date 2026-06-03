@@ -1,5 +1,7 @@
-import { motion } from "motion/react"
+import { Reveal } from "../components/common/Reveal"
 import { ArrowUpRight, Smartphone, ShoppingBag, Database } from "lucide-react"
+import { useState } from "react"
+import { ProjectModal } from "../components/projects/ProjectModal"
 
 const projects = [
   {
@@ -38,22 +40,17 @@ const projects = [
 ]
 
 export function ProjectsSection() {
+  const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null)
   return (
     <section id="projects" className="bg-[#09090B] px-6 py-32 text-white">
       <div className="mx-auto max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
-        >
+        <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
               Projects
             </p>
 
-            <h2 className="font-display max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
               Selected work built for real users and real business needs.
             </h2>
           </div>
@@ -62,20 +59,18 @@ export function ProjectsSection() {
             A mix of professional work, mobile development and business systems
             where design, logic and performance matter equally.
           </p>
-        </motion.div>
+        </Reveal>
 
         <div className="mt-20 grid gap-8">
           {projects.map((project, index) => {
             const Icon = project.icon
 
             return (
-              <motion.article
+              <Reveal
                 key={project.title}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.1 }}
-                className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition hover:border-[#00F5D4]/40 hover:bg-white/[0.07] md:p-10 ${
+                delay={index * 0.1}
+                onClick={() => setSelectedProject(project)}
+                className={`group relative cursor-pointer overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition hover:-translate-y-2 hover:border-[#00F5D4]/40 hover:bg-white/[0.07] md:p-10 ${
                   project.featured ? "min-h-[420px]" : ""
                 }`}
               >
@@ -129,7 +124,7 @@ export function ProjectsSection() {
                     <div className="relative z-10 flex h-full min-h-[220px] flex-col justify-between">
                       <div className="flex items-center justify-between">
                         <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300">
-                          Case Study
+                          View Case Study
                         </span>
 
                         <ArrowUpRight className="text-zinc-400 transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white" />
@@ -137,7 +132,7 @@ export function ProjectsSection() {
 
                       <div>
                         <p className="text-sm text-zinc-500">
-                          Featured build
+                          Click to explore
                         </p>
                         <p className="mt-2 text-2xl font-bold">
                           {project.title}
@@ -146,11 +141,15 @@ export function ProjectsSection() {
                     </div>
                   </div>
                 </div>
-              </motion.article>
+              </Reveal>
             )
           })}
         </div>
       </div>
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   )
 }
