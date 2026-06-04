@@ -4,15 +4,15 @@ import { RevealCard } from "../components/common/RevealCard"
 const stats = [
   {
     value: "1+",
-    label: "Years Professional Experience",
+    label: "Years Building Production Software",
   },
   {
     value: "10+",
     label: "Business Systems Delivered",
   },
   {
-    value: "2",
-    label: "Mobile Platforms Published",
+    value: "+4",
+    label: "Android & iOS Published Applications",
   },
   {
     value: "Full Stack",

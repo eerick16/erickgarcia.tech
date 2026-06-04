@@ -1,12 +1,11 @@
 import { Reveal } from "../components/common/Reveal"
-import { Building2, GraduationCap, Code2 } from "lucide-react"
 
 const experiences = [
   {
     year: "2025 — Present",
     title: "Full Stack Developer",
     place: "Integra Connective",
-    icon: Building2,
+    logo: "/images/integra-logo.png",
     description:
       "Development of POS systems, e-commerce platforms, administrative dashboards and cross-platform mobile applications for real clients.",
     tags: ["POS", "E-commerce", "php", "JQuery", "Ajax", ".NET MAUI", "C#", "MySQL", "APIs"],
@@ -15,7 +14,7 @@ const experiences = [
     year: "2023 — 2025",
     title: "TSU in Software Development",
     place: "Universidad Tecnológica de León",
-    icon: GraduationCap,
+    logo: "/images/utl-logo.png",
     description:
       "Associate Degree focused on multiplatform software development, databases, web technologies and mobile applications.",
     tags: ["Software Development", "Databases", "Web", "Mobile"],
@@ -24,7 +23,7 @@ const experiences = [
     year: "2025 — 2027",
     title: "B.S. in Software Engineering",
     place: "Universidad Tecnológica de León",
-    icon: Code2,
+    logo: "/images/utl-logo.png",
     description:
       "Currently pursuing a Bachelor's Degree in Software Engineering, focused on software architecture, development management and scalable systems.",
     tags: ["Engineering", "Architecture", "Software Management"],
@@ -50,7 +49,6 @@ export function ExperienceSection() {
 
           <div className="space-y-12">
             {experiences.map((item, index) => {
-              const Icon = item.icon
               const isLeft = index % 2 === 0
 
               return (
@@ -70,15 +68,21 @@ export function ExperienceSection() {
                     <div className="absolute -top-16 right-8 h-28 w-28 rounded-full bg-[#00F5D4]/10 blur-3xl" />
 
                     <div className="mb-6 flex items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#00F5D4]/10 text-[#00F5D4]">
-                        <Icon size={24} />
-                      </div>
-
+                      
                       <div>
                         <p className="text-sm text-zinc-500">{item.year}</p>
                         <h3 className="text-2xl font-bold">{item.title}</h3>
                         <p className="text-zinc-400">{item.place}</p>
                       </div>
+
+                      <div className="flex h-20 w-60 items-center justify-center rounded-2xl border border-white/10 bg-black/30 px-5">
+                        <img
+                          src={item.logo}
+                          alt={`${item.place} logo`}
+                          className="max-h-12 max-w-[220px] object-contain"
+                        />
+                      </div>
+
                     </div>
 
                     <p className="leading-8 text-zinc-400">

@@ -7,6 +7,7 @@ import { ImpactSection } from "./sections/ImpactSection"
 import { ProjectsSection } from "./sections/ProjectsSection"
 import { StackSection } from "./sections/StackSection"
 import { PhilosophySection } from "./sections/PhilosophySection"
+import { BeyondCodeSection } from "./sections/BeyondCodeSection"
 import { ContactSection } from "./sections/ContactSection"
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <ProjectsSection />
         <StackSection />
         <PhilosophySection />
+        <BeyondCodeSection />
         <ContactSection />
       </main>
     </>

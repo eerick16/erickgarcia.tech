@@ -1,5 +1,5 @@
-import { motion } from "motion/react"
-import { Mail, MapPin, Send } from "lucide-react"
+import { Reveal } from "../components/common/Reveal"
+import { Download, Mail, MapPin, Send } from "lucide-react"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 export function ContactSection() {
@@ -11,12 +11,7 @@ export function ContactSection() {
           <div className="absolute bottom-0 left-0 h-80 w-80 -translate-x-1/3 translate-y-1/3 rounded-full bg-[#8B5CF6]/10 blur-3xl" />
 
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <Reveal direction="right">
               <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
                 Contact
               </p>
@@ -40,21 +35,24 @@ export function ContactSection() {
                 </a>
 
                 <a
+                  href="/Erick-Alvarado-Garcia-CV.pdf"
+                  download
+                  className="flex items-center gap-2 rounded-full border border-[#00F5D4]/30 bg-[#00F5D4]/10 px-7 py-3 font-semibold text-[#00F5D4] backdrop-blur transition hover:scale-105 hover:bg-[#00F5D4]/20"
+                >
+                  <Download size={18} />
+                  Download CV
+                </a>
+
+                <a
                   href="#projects"
                   className="rounded-full border border-white/15 bg-white/5 px-7 py-3 font-semibold text-white backdrop-blur transition hover:scale-105 hover:bg-white/10"
                 >
                   View Projects
                 </a>
               </div>
-            </motion.div>
+            </Reveal>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="grid gap-5"
-            >
+            <Reveal direction="left" className="grid gap-5">
               <a
                 href="mailto:erickgc0125@gmail.com"
                 className="group flex items-center gap-5 rounded-3xl border border-white/10 bg-black/30 p-5 transition hover:border-[#00F5D4]/40 hover:bg-white/[0.06]"
@@ -71,7 +69,9 @@ export function ContactSection() {
               </a>
 
               <a
-                href="#"
+                href="https://github.com/eerick16"
+                target="_blank"
+                rel="noreferrer"
                 className="group flex items-center gap-5 rounded-3xl border border-white/10 bg-black/30 p-5 transition hover:border-[#00F5D4]/40 hover:bg-white/[0.06]"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#00F5D4]/10 text-[#00F5D4]">
@@ -80,13 +80,15 @@ export function ContactSection() {
                 <div>
                   <p className="text-sm text-zinc-500">GitHub</p>
                   <p className="font-semibold text-zinc-200 group-hover:text-white">
-                    github.com/IDGS-801-23001571
+                    github.com/eerick16
                   </p>
                 </div>
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/erick-alvarado-garcía-060678406/"
+                target="_blank"
+                rel="noreferrer"
                 className="group flex items-center gap-5 rounded-3xl border border-white/10 bg-black/30 p-5 transition hover:border-[#00F5D4]/40 hover:bg-white/[0.06]"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#00F5D4]/10 text-[#00F5D4]">
@@ -95,7 +97,7 @@ export function ContactSection() {
                 <div>
                   <p className="text-sm text-zinc-500">LinkedIn</p>
                   <p className="font-semibold text-zinc-200 group-hover:text-white">
-                    Add LinkedIn profile URL
+                    linkedin.com/in/erick-alvarado-garcía
                   </p>
                 </div>
               </a>
@@ -111,7 +113,7 @@ export function ContactSection() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </div>
 
