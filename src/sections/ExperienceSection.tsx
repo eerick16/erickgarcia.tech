@@ -70,7 +70,7 @@ export function ExperienceSection() {
                     <div className="mb-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                       
                       <div>
-                        <p className="text-sm text-zinc-500">{item.year}</p>
+                        <p className="text-sm text-zinc-500"><span className="font-semibold text-white">{item.year}</span></p>
                         <h3 className="text-2xl font-bold">{item.title}</h3>
                         <p className="text-zinc-400">{item.place}</p>
                       </div>

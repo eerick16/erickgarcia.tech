@@ -39,22 +39,87 @@ export function AboutSection() {
         <div className="mt-14 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] md:mt-20">
           <Reveal direction="right" className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur md:p-10">
             <p className="text-lg leading-9 text-zinc-400">
-              I'm Erick Alvarado García, a Full Stack Developer currently working
-              at Integra Connective, where I develop POS systems, administrative
-              platforms, e-commerce solutions and cross-platform mobile
-              applications for real clients.
+              I'm {" "}
+              <span className="font-semibold text-white"> 
+                Erick Alvarado García
+              </span>
+              , a {" "}
+              <span className="font-semibold text-white">
+                Full Stack Developer {" "}
+              </span>
+               currently working at {" "}
+              <span className="font-semibold text-white">
+                Integra Connective
+              </span>
+              , where I develop {" "}
+              <span className="font-semibold text-white">
+                POS systems
+              </span>
+              , {" "}
+              <span className="font-semibold text-white">
+                administrative platforms
+              </span>
+              , {" "}
+              <span className="font-semibold text-white">
+                e-commerce solutions {" "}
+              </span>
+              and {" "}
+              <span className="font-semibold text-white">
+                cross-platform mobile applications {" "}
+              </span> 
+              for {" "}
+              <span className="font-semibold text-white">
+                real clients
+              </span> 
+              .
             </p>
 
             <p className="mt-6 text-lg leading-9 text-zinc-400">
-              My work ranges from designing interfaces and building frontend
-              experiences to developing APIs, databases, integrations and
-              scalable backend solutions.
+              My work ranges from{" "}
+              <span className="font-semibold text-white">
+                designing interfaces
+              </span>
+              {" "}and building{" "}
+              <span className="font-semibold text-white">
+                frontend experiences
+              </span>
+              {" "}to developing{" "}
+              <span className="font-semibold text-white">
+                APIs
+              </span>
+              ,{" "}
+              <span className="font-semibold text-white">
+                databases
+              </span>
+              ,{" "}
+              <span className="font-semibold text-white">
+                integrations
+              </span>
+              {" "}and{" "}
+              <span className="font-semibold text-white">
+                scalable backend solutions
+              </span>
+              .
             </p>
 
             <p className="mt-6 text-lg leading-9 text-zinc-400">
-              Currently pursuing a Bachelor's Degree in Software Engineering
-              while expanding my experience in mobile development, cloud
-              integrations and software architecture.
+              Currently pursuing a{" "}
+              <span className="font-semibold text-[#00F5D4]">
+                Bachelor's Degree in Software Engineering
+              </span>
+              {" "}while expanding my experience in{" "}
+              <span className="font-semibold text-white">
+                mobile development
+              </span>
+              ,{" "}
+              <span className="font-semibold text-white">
+                cloud integrations
+              </span>
+              {" "}and{" "}
+              <span className="font-semibold text-white">
+                software architecture
+              </span>
+              .
             </p>
           </Reveal>
 

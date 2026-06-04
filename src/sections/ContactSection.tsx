@@ -21,9 +21,23 @@ export function ContactSection() {
               </h2>
 
               <p className="mt-8 max-w-2xl text-lg leading-9 text-zinc-400">
-                Open to software development opportunities, freelance projects,
-                collaborations and systems that need both strong logic and a clean
-                user experience.
+                Open to{" "}
+                <span className="font-semibold text-white">
+                  software engineering opportunities
+                </span>
+                {" "}where I can contribute to{" "}
+                <span className="font-semibold text-white">
+                  real products
+                </span>
+                , collaborate with{" "}
+                <span className="font-semibold text-white">
+                  high-performing teams
+                </span>
+                {" "}and continue growing as a{" "}
+                <span className="font-semibold text-[#00F5D4]">
+                  Full Stack Developer
+                </span>
+                .
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">

@@ -56,8 +56,23 @@ export function ProjectsSection() {
           </div>
 
           <p className="max-w-md text-zinc-400 md:text-right">
-            A mix of professional work, mobile development and business systems
-            where design, logic and performance matter equally.
+            A mix of{" "}
+            <span className="font-semibold text-white">
+              professional work
+            </span>
+            , mobile development and business systems where{" "}
+            <span className="font-semibold text-white">
+              design
+            </span>
+            ,{" "}
+            <span className="font-semibold text-white">
+              logic
+            </span>
+            {" "}and{" "}
+            <span className="font-semibold text-white">
+              performance
+            </span>
+            {" "}matter equally.
           </p>
         </Reveal>
 

@@ -11,7 +11,7 @@ const stats = [
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#09090B] px-6 text-white">
+    <section id="home" className="relative min-h-screen overflow-hidden bg-[#09090B] px-6 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,245,212,0.16),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(139,92,246,0.18),_transparent_35%)]" />
 
       <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#00F5D4]/10 blur-[140px]" />
@@ -38,11 +38,28 @@ export function HeroSection() {
             </span>
         </Reveal>
 
-        <Reveal className="mt-6 max-w-3xl text-base leading-7 text-zinc-400 sm:text-lg md:mt-8 md:text-xl md:leading-8"
-        >
-          I design and develop POS systems, e-commerce platforms,
-          administrative dashboards and cross-platform mobile apps with
-          clean interfaces, scalable logic and real business impact.
+        <Reveal className="mt-6 max-w-3xl text-base leading-7 text-zinc-400 sm:text-lg md:mt-8 md:text-xl md:leading-8">
+          I design and develop{" "}
+          <span className="font-semibold text-white">
+            POS systems
+          </span>
+          ,{" "}
+          <span className="font-semibold text-white">
+            e-commerce platforms
+          </span>
+          ,{" "}
+          <span className="font-semibold text-white">
+            administrative dashboards
+          </span>
+          {" "}and{" "}
+          <span className="font-semibold text-white">
+            cross-platform mobile apps
+          </span>
+          {" "}with clean interfaces, scalable logic and{" "}
+          <span className="font-semibold text-white">
+            real business impact
+          </span>
+          .
         </Reveal>
 
         <Reveal delay={0.4} className="mt-8 flex w-full max-w-sm flex-col gap-4 sm:max-w-none sm:flex-row sm:justify-center md:mt-10">
@@ -74,15 +91,22 @@ export function HeroSection() {
           delay={0.5}
           className="mt-10 grid w-full max-w-4xl grid-cols-2 gap-3 md:grid-cols-4"
         >
-          {stats.map((stat) => (
+          {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur"
+              className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur"
+              style={{
+                animation: `floatCard 4s ease-in-out ${index * 0.35}s infinite`,
+              }}
             >
-              <p className="bg-gradient-to-r from-[#00F5D4] to-[#8B5CF6] bg-clip-text text-2xl font-black text-transparent md:text-3xl">
+              <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-[#00F5D4]/60 to-transparent" />
+              <div className="absolute -top-14 left-1/2 h-24 w-24 -translate-x-1/2 rounded-full bg-[#00F5D4]/10 blur-2xl" />
+
+              <p className="relative bg-gradient-to-r from-[#00F5D4] to-[#8B5CF6] bg-clip-text text-2xl font-black text-transparent md:text-3xl">
                 {stat.value}
               </p>
-              <p className="mt-1 text-xs leading-5 text-zinc-400 md:text-sm">
+
+              <p className="relative mt-1 text-xs leading-5 text-zinc-400 md:text-sm">
                 {stat.label}
               </p>
             </div>
