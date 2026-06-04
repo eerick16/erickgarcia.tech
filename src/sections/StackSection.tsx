@@ -103,7 +103,7 @@ const stackGroups = [
 
 export function StackSection() {
   return (
-    <section id="stack" className="bg-[#09090B] px-6 py-32 text-white">
+    <section id="stack" className="bg-[#09090B] px-6 py-24 md:py-32 text-white">
       <div className="mx-auto max-w-7xl">
         <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
@@ -111,7 +111,7 @@ export function StackSection() {
               Tech Stack
             </p>
 
-            <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="font-display max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
               Technologies I use to design, build and ship software.
             </h2>
           </div>
@@ -122,7 +122,7 @@ export function StackSection() {
           </p>
         </Reveal>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 md:mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {stackGroups.map((group, index) => {
             const Icon = group.icon
 

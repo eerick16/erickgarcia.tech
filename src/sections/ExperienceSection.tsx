@@ -8,7 +8,7 @@ const experiences = [
     logo: "/images/integra-logo.png",
     description:
       "Development of POS systems, e-commerce platforms, administrative dashboards and cross-platform mobile applications for real clients.",
-    tags: ["POS", "E-commerce", "php", "JQuery", "Ajax", ".NET MAUI", "C#", "MySQL", "APIs"],
+    tags: ["POS", "E-commerce", "PHP", "jQuery", "AJAX", ".NET MAUI", "C#", "MySQL", "APIs"],
   },
   {
     year: "2023 — 2025",
@@ -32,19 +32,19 @@ const experiences = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="bg-[#09090B] px-6 py-32 text-white">
+    <section id="experience" className="bg-[#09090B] px-6 py-24 text-white md:py-24 md:py-32">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
             Experience
           </p>
 
-          <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+          <h2 className="font-display max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
             From academic foundations to production-ready systems.
           </h2>
         </Reveal>
 
-        <div className="relative mt-20">
+        <div className="relative mt-14 md:mt-20">
           <div className="absolute left-6 top-0 h-full w-px bg-white/10 md:left-1/2" />
 
           <div className="space-y-12">
@@ -67,7 +67,7 @@ export function ExperienceSection() {
                     <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#00F5D4]/50 to-transparent" />
                     <div className="absolute -top-16 right-8 h-28 w-28 rounded-full bg-[#00F5D4]/10 blur-3xl" />
 
-                    <div className="mb-6 flex items-center gap-4">
+                    <div className="mb-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                       
                       <div>
                         <p className="text-sm text-zinc-500">{item.year}</p>
@@ -75,7 +75,7 @@ export function ExperienceSection() {
                         <p className="text-zinc-400">{item.place}</p>
                       </div>
 
-                      <div className="flex h-20 w-60 items-center justify-center rounded-2xl border border-white/10 bg-black/30 px-5">
+                      <div className="flex h-20 w-full items-center justify-center rounded-2xl border border-white/10 bg-black/30 px-5 sm:w-60">
                         <img
                           src={item.logo}
                           alt={`${item.place} logo`}
@@ -93,7 +93,7 @@ export function ExperienceSection() {
                       {item.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm text-zinc-300 justify-content: center;"
+                          className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm text-zinc-300"
                         >
                           {tag}
                         </span>

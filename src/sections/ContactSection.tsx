@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-[#09090B] px-6 py-32 text-white">
+    <section id="contact" className="bg-[#09090B] px-6 py-24 md:py-32 text-white">
       <div className="mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur md:p-14">
           <div className="absolute right-0 top-0 h-80 w-80 translate-x-1/3 -translate-y-1/3 rounded-full bg-[#00F5D4]/10 blur-3xl" />
@@ -16,7 +16,7 @@ export function ContactSection() {
                 Contact
               </p>
 
-              <h2 className="font-display max-w-3xl text-4xl font-black tracking-tight md:text-6xl">
+              <h2 className="font-display max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
                 Let&apos;s build something that actually works.
               </h2>
 

@@ -42,7 +42,7 @@ const projects = [
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null)
   return (
-    <section id="projects" className="bg-[#09090B] px-6 py-32 text-white">
+    <section id="projects" className="bg-[#09090B] px-6 py-24 md:py-32 text-white">
       <div className="mx-auto max-w-7xl">
         <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
@@ -50,7 +50,7 @@ export function ProjectsSection() {
               Projects
             </p>
 
-            <h2 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="font-display max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
               Selected work built for real users and real business needs.
             </h2>
           </div>
@@ -61,7 +61,7 @@ export function ProjectsSection() {
           </p>
         </Reveal>
 
-        <div className="mt-20 grid gap-8">
+        <div className="mt-14 md:mt-20 grid gap-8">
           {projects.map((project, index) => {
             const Icon = project.icon
 
