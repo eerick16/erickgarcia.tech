@@ -1,5 +1,8 @@
 import { BookOpen, Dumbbell, Gamepad2, Gauge, Layers3, Music2, Users, Workflow } from "lucide-react"
 import { Reveal } from "../components/common/Reveal"
+import { useState } from "react"
+import { Award } from "lucide-react"
+import { CertificationsModal } from "../components/certifications/CertificationsModal"
 
 const principles = [
   { title: "Performance", icon: Gauge },
@@ -16,6 +19,9 @@ const interests = [
 ]
 
 export function AboutSection() {
+
+  const [isCertificationsOpen, setIsCertificationsOpen] = useState(false)
+
   return (
     <section id="about" className="bg-[#09090B] px-6 py-24 text-white md:py-32">
       <div className="mx-auto max-w-7xl">
@@ -121,6 +127,33 @@ export function AboutSection() {
               </span>
               .
             </p>
+
+            <button
+              type="button"
+              onClick={() => setIsCertificationsOpen(true)}
+              className="group mt-8 w-full rounded-[2rem] border border-white/10 bg-black/30 p-6 text-left backdrop-blur transition hover:-translate-y-1 hover:border-[#00F5D4]/40 hover:bg-white/[0.07]"
+            >
+              <div className="flex items-start gap-5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#00F5D4]/10 text-[#00F5D4]">
+                  <Award size={28} />
+                </div>
+
+                <div>
+                  <h3 className="font-display text-2xl font-bold">
+                    UX Certifications
+                  </h3>
+
+                  <p className="mt-3 leading-7 text-zinc-400">
+                    Coursera certifications focused on UX foundations, design process,
+                    wireframes and low-fidelity prototypes.
+                  </p>
+
+                  <p className="mt-4 text-sm font-semibold text-[#00F5D4]">
+                    View certificates →
+                  </p>
+                </div>
+              </div>
+            </button>
           </Reveal>
 
           <Reveal direction="left" className="grid gap-6">
@@ -182,6 +215,12 @@ export function AboutSection() {
           </Reveal>
         </div>
       </div>
+
+      <CertificationsModal
+        isOpen={isCertificationsOpen}
+        onClose={() => setIsCertificationsOpen(false)}
+      />
+
     </section>
   )
 }

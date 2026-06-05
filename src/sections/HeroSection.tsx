@@ -21,6 +21,18 @@ export function HeroSection() {
           Full Stack Developer · Mobile Developer · UI/UX Focused
         </Reveal>
 
+        <Reveal delay={0.05} className="mb-6">
+          <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full border border-white/10 bg-white/[0.04] p-1 shadow-[0_0_60px_rgba(0,245,212,0.18)] backdrop-blur sm:h-32 sm:w-32 md:h-36 md:w-36">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00F5D4]/30 via-transparent to-[#8B5CF6]/30" />
+
+            <img
+              src="/images/erick-profile.png"
+              alt="Erick Alvarado García"
+              className="relative h-full w-full rounded-full object-cover"
+            />
+          </div>
+        </Reveal>
+
         <Reveal delay={0.1} className="mt-2">
             <h1 className="font-display text-4xl font-black tracking-tight sm:text-6xl md:text-8xl lg:text-9xl">
                 Erick Alvarado
