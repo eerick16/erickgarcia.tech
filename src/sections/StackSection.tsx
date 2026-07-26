@@ -23,10 +23,7 @@ const stackGroups = [
       "React",
       "Vite",
       "Tailwind CSS",
-      "Bootstrap",
-      "jQuery",
-      "AJAX",
-      "JSON",
+      "Bootstrap"
     ],
   },
   {
@@ -39,7 +36,6 @@ const stackGroups = [
     icon: MonitorSmartphone,
     items: [
       ".NET MAUI",
-      "XAML",
       "Android Studio",
       "Kotlin",
       "Xcode",
@@ -51,7 +47,7 @@ const stackGroups = [
   {
     title: "Databases",
     icon: Database,
-    items: ["MySQL", "SQL Server", "MongoDB", "CouchDB", "Stored Procedures"],
+    items: ["MySQL", "SQL Server", "MongoDB"],
   },
   {
     title: "Cloud & APIs",
@@ -63,7 +59,7 @@ const stackGroups = [
       "Google OAuth",
       "Apple Sign-In",
       "Estafeta API",
-      "FacturaPorTi",
+      "FacturoPorTi",
       "OneSignal",
     ],
   },
@@ -80,9 +76,7 @@ const stackGroups = [
       "Postman",
       "Visual Studio",
       "VS Code",
-      "NetBeans",
-      "MySQL Workbench",
-      "WEKA",
+      "MySQL Workbench"
     ],
   },
   {
