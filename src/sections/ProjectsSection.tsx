@@ -3,9 +3,16 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  Clock,
+  Cpu,
   Database,
   ExternalLink,
+  Globe,
+  Layout,
+  Lock,
+  PackageCheck,
   ShoppingBag,
+  ShoppingCart,
   Smartphone,
 } from "lucide-react"
 
@@ -29,24 +36,54 @@ const projects = [
     overview:
       "Cross-platform mobile app rebuilt from Xamarin to .NET MAUI, redesigned with a modern interface and expanded with social features such as friends, duels, rankings, messaging and notifications.",
     impact:
-      "Transformed an exam-focused dental app into a more interactive and social learning experience.",
+      "Transformed an exam-focused dental app into an interactive and social learning experience.",
     technologies: [
       ".NET MAUI",
       "XAML",
-      "OAuth",
+      "OAuth 2.0",
       "Push Notifications",
       "Mobile",
     ],
     icon: Smartphone,
-    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+    images: [
+      "/images/projects/dentiq/1.jpg",
+      "/images/projects/dentiq/2.jpg",
+      "/images/projects/dentiq/3.jpg",
+      "/images/projects/dentiq/4.jpg",
+      "/images/projects/dentiq/5.jpg",
+      "/images/projects/dentiq/6.jpg",
+      "/images/projects/dentiq/7.jpg",
+    ],
     links: {
-      playStore: "",
+      playStore: "", // En proceso
       appStore: "",
       github: "",
     },
   },
   {
-    title: "Bella Sofía E-commerce",
+    title: "Bella Sofía Mobile E-commerce",
+    type: "Mobile E-commerce",
+    overview:
+      "Production-ready mobile e-commerce application published on the Play Store, featuring product catalog navigation, secure checkout flows, and payment gateway integrations.",
+    impact:
+      "Delivered a mobile-first commercial sales channel for end customers.",
+    technologies: [".NET MAUI", "C#", "Stripe API", "Google Play"],
+    icon: ShoppingCart,
+    images: [
+      "/images/projects/bellasofia-mobile/1.jpg",
+      "/images/projects/bellasofia-mobile/2.jpg",
+      "/images/projects/bellasofia-mobile/3.jpg",
+      "/images/projects/bellasofia-mobile/4.jpg",
+      "/images/projects/bellasofia-mobile/5.jpg",
+    ],
+    links: {
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.integra.bellaSofia&hl=es_MX",
+      github: "",
+    },
+  },
+  {
+    title: "Bella Sofía Web E-commerce",
     type: "E-commerce Platform",
     overview:
       "Online store connected to commercial processes, including product catalogue, shopping flow, backend services and payment integration.",
@@ -54,30 +91,106 @@ const projects = [
       "Built a functional sales channel connected to real business operations.",
     technologies: ["PHP", "JavaScript", "jQuery", "MySQL", "Stripe"],
     icon: ShoppingBag,
-    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+    images: [
+      "/images/projects/bellasofia-web/1.jpg",
+      "/images/projects/bellasofia-web/2.jpg",
+      "/images/projects/bellasofia-web/3.jpg",
+    ],
     links: {
-      website: "",
+      website: "https://bellasofia.integradesarrollo.com/index.php",
       github: "",
     },
   },
   {
-    title: "Professional POS Systems",
+    title: "Custom Enterprise POS Suite",
     type: "Business Systems",
     overview:
-      "Development and optimisation of POS systems and administrative dashboards for commercial clients, including sales loading, inventory workflows, database logic and backend services.",
+      "Development and optimisation of POS systems and administrative dashboards for commercial clients (Cilo, Cohoba, BellaSofía, Eurocycle, Funmex), including sales loading, inventory workflows, database logic and backend services.",
     impact:
-      "Improved performance and usability for systems handling large operational datasets.",
+      "Improved performance and usability for custom business operations handling large datasets.",
     technologies: [
       "PHP",
       "JavaScript",
       "MySQL",
       "Stored Procedures",
       "APIs",
+      "Figma",
     ],
     icon: Database,
     images: ["/default.jpg", "/default.jpg", "/default.jpg"],
     confidential: true,
-    links: {},
+    links: {
+      figma: "",
+    },
+  },
+  {
+    title: "Field Operations & Logistics Apps",
+    type: "Enterprise Mobile Apps",
+    overview:
+      "Suite of specialized mobile apps for field teams: Funmex (sales contracts & collections), Eurocycle (hazardous waste route collection), and Costa Rica (offline-first order delivery tracking).",
+    impact:
+      "Streamlined logistics and collection workflows with offline database sync capabilities.",
+    technologies: [
+      ".NET MAUI",
+      "SQLite",
+      "Offline Sync",
+      "REST APIs",
+      "Figma",
+    ],
+    icon: PackageCheck,
+    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+    confidential: true,
+    links: {
+      figma: "",
+    },
+  },
+  {
+    title: "Leather Goods E-commerce & Business ERP",
+    type: "Full Stack Web System",
+    overview:
+      "University web ecosystem combining a leather product online store with an internal business management system for sales tracking, raw material management, quotes, suppliers, and customer databases.",
+    impact:
+      "Integrated front-facing sales with back-office supply chain and resource management.",
+    technologies: ["PHP", "JavaScript", "MySQL", "HTML/CSS", "Bootstrap"],
+    icon: Globe,
+    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+    links: {
+      github: "",
+    },
+  },
+  {
+    title: "Volts — IoT Companion & Web Platform",
+    type: "IoT + Mobile + Web",
+    overview:
+      "Integrative system featuring a physical eco-friendly companion robot made from reused materials, a mobile app to interact with and control the robot via Firebase, and an e-commerce web platform for institutional packages.",
+    impact:
+      "Combined hardware interaction, gamified social responsibility messages, and an e-commerce platform.",
+    technologies: [
+      "IoT",
+      "Firebase",
+      "Mobile App",
+      "Web E-commerce",
+      "PHP/MySQL",
+    ],
+    icon: Cpu,
+    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+    links: {
+      github: "",
+    },
+  },
+  {
+    title: "AI Predictive Model & System",
+    type: "Machine Learning / R&D",
+    overview:
+      "Ongoing development project exploring machine learning / AI model training and implementation for automated data prediction and decision-making.",
+    impact:
+      "Active research and development project focused on AI integration.",
+    technologies: ["Python", "Machine Learning", "UML Modeling", "AI"],
+    icon: Layout,
+    images: ["/default.jpg", "/default.jpg"],
+    links: {
+      github: "",
+    },
   },
 ]
 
@@ -283,7 +396,7 @@ export function ProjectsSection() {
                     </div>
 
                     {project.confidential && (
-                      <span className="hidden rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-zinc-400 sm:block">
+                      <span className="hidden rounded-full border border-purple-500/30 bg-purple-500/10 px-3 py-1.5 text-xs font-medium text-purple-300 sm:block">
                         Confidential
                       </span>
                     )}
@@ -326,67 +439,80 @@ export function ProjectsSection() {
                     </div>
                   </div>
 
-                  {Object.values(project.links).some(Boolean) && (
-                    <div className="mt-10 flex flex-wrap gap-3 border-t border-white/10 pt-7">
-                      {"github" in project.links &&
-                        project.links.github && (
-                          <a
-                            href={project.links.github}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-[#00F5D4]/40 hover:bg-[#00F5D4]/10 hover:text-[#00F5D4]"
-                          >
-                            <FaGithub size={18} />
-                            GitHub
-                          </a>
-                        )}
+                  {/* Acciones & Status Badges */}
+                  <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-white/10 pt-7">
+                    {"github" in project.links && project.links.github && (
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:scale-105 hover:border-[#00F5D4]/50 hover:bg-[#00F5D4]/10 hover:text-[#00F5D4]"
+                      >
+                        <FaGithub size={18} />
+                        GitHub Repo
+                      </a>
+                    )}
 
-                      {"playStore" in project.links &&
-                        project.links.playStore && (
-                          <a
-                            href={project.links.playStore}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-[#00F5D4]/40 hover:bg-[#00F5D4]/10 hover:text-[#00F5D4]"
-                          >
-                            <ExternalLink size={18} />
-                            Play Store
-                          </a>
-                        )}
+                    {"playStore" in project.links && project.links.playStore && (
+                      <a
+                        href={project.links.playStore}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-[#00F5D4] bg-[#00F5D4] px-6 py-3 text-sm font-bold text-black shadow-[0_0_20px_rgba(0,245,212,0.35)] transition hover:scale-105 hover:bg-[#00F5D4]/90"
+                      >
+                        <ExternalLink size={18} />
+                        Get on Play Store
+                      </a>
+                    )}
 
-                      {"appStore" in project.links &&
-                        project.links.appStore && (
-                          <a
-                            href={project.links.appStore}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-[#00F5D4]/40 hover:bg-[#00F5D4]/10 hover:text-[#00F5D4]"
-                          >
-                            <ExternalLink size={18} />
-                            App Store
-                          </a>
-                        )}
+                    {"website" in project.links && project.links.website && (
+                      <a
+                        href={project.links.website}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-[#00F5D4] bg-[#00F5D4] px-6 py-3 text-sm font-bold text-black shadow-[0_0_20px_rgba(0,245,212,0.35)] transition hover:scale-105 hover:bg-[#00F5D4]/90"
+                      >
+                        <ExternalLink size={18} />
+                        Visit Live Website
+                      </a>
+                    )}
 
-                      {"website" in project.links &&
-                        project.links.website && (
-                          <a
-                            href={project.links.website}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-[#00F5D4]/40 hover:bg-[#00F5D4]/10 hover:text-[#00F5D4]"
-                          >
-                            <ExternalLink size={18} />
-                            Live website
-                          </a>
-                        )}
-                    </div>
-                  )}
+                    {"figma" in project.links && project.links.figma && (
+                      <a
+                        href={project.links.figma}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-purple-500/40 bg-purple-500/10 px-5 py-3 text-sm font-semibold text-purple-300 transition hover:scale-105 hover:bg-purple-500/20"
+                      >
+                        <ExternalLink size={18} />
+                        Interactive Figma Prototype
+                      </a>
+                    )}
+
+                    {/* Banner En Proceso */}
+                    {"playStore" in project.links &&
+                      project.links.playStore === "" &&
+                      !project.confidential && (
+                        <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2.5 text-xs font-semibold text-amber-400 backdrop-blur-md">
+                          <Clock size={15} />
+                          Play Store Review in Progress
+                        </div>
+                      )}
+
+                    {/* Banner Confidencial / NDA */}
+                    {project.confidential && (
+                      <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2.5 text-xs font-semibold text-purple-300 backdrop-blur-md">
+                        <Lock size={15} />
+                        Protected under NDA (Recreated UI)
+                      </div>
+                    )}
+                  </div>
                 </div>
 
-                {/* Image carousel */}
+                {/* Image carousel ajustado con object-contain */}
                 <div className="flex min-h-[430px] items-center justify-center p-5 sm:p-8 lg:min-h-full lg:p-10">
                   <div
-                    className="group/carousel relative h-full min-h-[390px] w-full cursor-grab touch-pan-y select-none overflow-hidden rounded-[1.6rem] border border-white/10 bg-black/40 active:cursor-grabbing sm:min-h-[480px] lg:min-h-[560px]"
+                    className="group/carousel relative flex h-[460px] w-full cursor-grab touch-pan-y select-none items-center justify-center overflow-hidden rounded-[1.6rem] border border-white/10 bg-black/60 p-4 active:cursor-grabbing sm:h-[520px] lg:h-[580px]"
                     onMouseEnter={() => setIsImageHovered(true)}
                     onMouseLeave={() => setIsImageHovered(false)}
                     onPointerDown={handlePointerDown}
@@ -398,16 +524,15 @@ export function ProjectsSection() {
                       src={project.images[imageIndex]}
                       alt={`${project.title} preview ${imageIndex + 1}`}
                       draggable={false}
-                      className="h-full min-h-[390px] w-full animate-[fadeIn_0.45s_ease-out] object-cover sm:min-h-[480px] lg:min-h-[560px]"
+                      className="h-full w-full animate-[fadeIn_0.45s_ease-out] object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.5)]"
                     />
 
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#09090B]/80 via-transparent to-black/20" />
-
-                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,245,212,0.12),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(139,92,246,0.14),_transparent_40%)]" />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#09090B]/60 via-transparent to-transparent" />
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,245,212,0.05),_transparent_70%)]" />
 
                     {project.confidential && (
-                      <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-black/50 px-4 py-2 text-xs text-zinc-300 backdrop-blur-md">
-                        Recreated interface
+                      <div className="absolute left-5 top-5 rounded-full border border-purple-500/30 bg-black/70 px-4 py-1.5 text-xs text-purple-300 backdrop-blur-md">
+                        Figma Concept UI
                       </div>
                     )}
 
