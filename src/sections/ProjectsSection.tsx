@@ -145,15 +145,24 @@ const projects = [
     },
   },
   {
-    title: "Leather Goods E-commerce & Business ERP",
+    title: "Casa León E-commerce & Business ERP",
     type: "Full Stack Web System",
     overview:
       "University web ecosystem combining a leather product online store with an internal business management system for sales tracking, raw material management, quotes, suppliers, and customer databases.",
     impact:
       "Integrated front-facing sales with back-office supply chain and resource management.",
-    technologies: ["PHP", "JavaScript", "MySQL", "HTML/CSS", "Bootstrap"],
+    technologies: ["Python", "Angular", "MongoDB", "HTML/CSS", "Bootstrap"],
     icon: Globe,
-    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+    images: [
+      "/images/projects/marroquineria/1.jpg",
+      "/images/projects/marroquineria/2.jpg",
+      "/images/projects/marroquineria/3.jpg",
+      "/images/projects/marroquineria/4.jpg",
+      "/images/projects/marroquineria/5.jpg",
+      "/images/projects/marroquineria/6.jpg",
+      "/images/projects/marroquineria/7.jpg",
+      "/images/projects/marroquineria/8.jpg",
+      "/images/projects/marroquineria/9.jpg"],
     links: {
       github: "",
     },
@@ -167,15 +176,31 @@ const projects = [
       "Combined hardware interaction, gamified social responsibility messages, and an e-commerce platform.",
     technologies: [
       "IoT",
+      "Arduino IDE",
       "Firebase",
       "Mobile App",
       "Web E-commerce",
-      "PHP/MySQL",
+      "Kotlin",
+      "React/Mongo",
     ],
     icon: Cpu,
-    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+    images: [
+      "/images/projects/pawsome-iot/1.jpg", 
+      "/images/projects/pawsome-iot/2.jpg", 
+      "/images/projects/pawsome-iot/3.jpg", 
+      "/images/projects/pawsome-iot/4.jpg",
+      "/images/projects/pawsome-iot/5.jpg",
+      "/images/projects/pawsome-iot/6.jpg",
+      "/images/projects/pawsome-iot/7.jpg",
+      "/images/projects/pawsome-iot/8.jpg",
+      "/images/projects/pawsome-iot/9.jpg",
+      "/images/projects/pawsome-iot/10.jpg",
+      "/images/projects/pawsome-iot/11.jpg",
+      "/images/projects/pawsome-iot/12.jpg",
+      "/images/projects/pawsome-iot/13.jpg"
+    ],
     links: {
-      github: "",
+      github: "https://github.com/IDGS-801-23001542/volts.git",
     },
   },
   {
