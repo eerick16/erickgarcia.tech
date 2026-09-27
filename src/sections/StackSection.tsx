@@ -10,112 +10,211 @@ import {
   Server,
   Wrench,
 } from "lucide-react"
-
-const stackGroups = [
-  {
-    title: "Frontend",
-    icon: Code2,
-    items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "Bootstrap"
-    ],
-  },
-  {
-    title: "Backend",
-    icon: Server,
-    items: ["PHP", "Node.js", "C#", "Java", "Flask", "Python"],
-  },
-  {
-    title: "Mobile",
-    icon: MonitorSmartphone,
-    items: [
-      ".NET MAUI",
-      "Android Studio",
-      "Kotlin",
-      "Xcode",
-      "TestFlight",
-      "App Store Connect",
-      "Google Cloud Console",
-    ],
-  },
-  {
-    title: "Databases",
-    icon: Database,
-    items: ["MySQL", "SQL Server", "MongoDB", "Firebase"],
-  },
-  {
-    title: "Cloud & APIs",
-    icon: Globe2,
-    items: [
-      "Google OAuth",
-      "Apple Sign-In",
-      "Estafeta API",
-      "FacturoPorTi",
-      "Email API",
-      "OneSignal",
-      "AWS",
-      "Stripe",
-    ],
-  },
-  {
-    title: "Design",
-    icon: FaFigma,
-    items: ["Figma", "Photoshop", "Illustrator", "UI/UX", "Low-Fidelity Prototypes"],
-  },
-  {
-    title: "Tools",
-    icon: Wrench,
-    items: [
-      "GitHub",
-      "Postman",
-      "Visual Studio",
-      "VS Code",
-      "MySQL Workbench"
-    ],
-  },
-  {
-    title: "Used in this Portfolio",
-    icon: Layers3,
-    items: [
-      "React",
-      "Vite",
-      "TypeScript",
-      "Tailwind CSS",
-      "Motion",
-      "Vercel",
-    ],
-  },
-]
+import { useLanguage } from "../context/useLanguage"
 
 export function StackSection() {
+  const { language } = useLanguage()
+
+  const content = {
+    es: {
+      badge: "STACK TECNOLÓGICO",
+      title: "Tecnologías que utilizo para diseñar, construir y desplegar software.",
+      description:
+        "Desde el diseño de interfaces hasta la lógica backend, publicación móvil, bases de datos, herramientas cloud e integraciones de terceros.",
+      stackGroups: [
+        {
+          title: "Frontend",
+          icon: Code2,
+          items: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Bootstrap",
+          ],
+        },
+        {
+          title: "Backend",
+          icon: Server,
+          items: ["PHP", "Node.js", "C#", "Java", "Flask", "Python"],
+        },
+        {
+          title: "Móvil",
+          icon: MonitorSmartphone,
+          items: [
+            ".NET MAUI",
+            "Android Studio",
+            "Kotlin",
+            "Xcode",
+            "TestFlight",
+            "App Store Connect",
+            "Google Cloud Console",
+          ],
+        },
+        {
+          title: "Bases de Datos",
+          icon: Database,
+          items: ["MySQL", "SQL Server", "MongoDB", "Firebase"],
+        },
+        {
+          title: "Cloud y APIs",
+          icon: Globe2,
+          items: [
+            "Google OAuth",
+            "Apple Sign-In",
+            "Estafeta API",
+            "FacturoPorTi",
+            "Email API",
+            "OneSignal",
+            "AWS",
+            "Stripe",
+          ],
+        },
+        {
+          title: "Diseño",
+          icon: FaFigma,
+          items: ["Figma", "Photoshop", "Illustrator", "Diseño UI/UX", "Prototipos de Baja Fidelidad"],
+        },
+        {
+          title: "Herramientas",
+          icon: Wrench,
+          items: [
+            "GitHub",
+            "Postman",
+            "Visual Studio",
+            "VS Code",
+            "MySQL Workbench",
+          ],
+        },
+        {
+          title: "Usado en este Portafolio",
+          icon: Layers3,
+          items: [
+            "React",
+            "Vite",
+            "TypeScript",
+            "Tailwind CSS",
+            "Motion",
+            "Vercel",
+          ],
+        },
+      ],
+    },
+    en: {
+      badge: "TECH STACK",
+      title: "Technologies I use to design, build and ship software.",
+      description:
+        "From interface design to backend logic, mobile publishing, databases, cloud tools and third-party integrations.",
+      stackGroups: [
+        {
+          title: "Frontend",
+          icon: Code2,
+          items: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Bootstrap",
+          ],
+        },
+        {
+          title: "Backend",
+          icon: Server,
+          items: ["PHP", "Node.js", "C#", "Java", "Flask", "Python"],
+        },
+        {
+          title: "Mobile",
+          icon: MonitorSmartphone,
+          items: [
+            ".NET MAUI",
+            "Android Studio",
+            "Kotlin",
+            "Xcode",
+            "TestFlight",
+            "App Store Connect",
+            "Google Cloud Console",
+          ],
+        },
+        {
+          title: "Databases",
+          icon: Database,
+          items: ["MySQL", "SQL Server", "MongoDB", "Firebase"],
+        },
+        {
+          title: "Cloud & APIs",
+          icon: Globe2,
+          items: [
+            "Google OAuth",
+            "Apple Sign-In",
+            "Estafeta API",
+            "FacturoPorTi",
+            "Email API",
+            "OneSignal",
+            "AWS",
+            "Stripe",
+          ],
+        },
+        {
+          title: "Design",
+          icon: FaFigma,
+          items: ["Figma", "Photoshop", "Illustrator", "UI/UX Design", "Low-Fidelity Prototypes"],
+        },
+        {
+          title: "Tools",
+          icon: Wrench,
+          items: [
+            "GitHub",
+            "Postman",
+            "Visual Studio",
+            "VS Code",
+            "MySQL Workbench",
+          ],
+        },
+        {
+          title: "Used in this Portfolio",
+          icon: Layers3,
+          items: [
+            "React",
+            "Vite",
+            "TypeScript",
+            "Tailwind CSS",
+            "Motion",
+            "Vercel",
+          ],
+        },
+      ],
+    },
+  }
+
+  const t = content[language]
+
   return (
-    <section id="stack" className="bg-[#09090B] px-6 py-24 md:py-32 text-white">
+    <section id="stack" className="bg-[#09090B] px-6 py-24 text-white md:py-32">
       <div className="mx-auto max-w-7xl">
         <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
-              Tech Stack
+              {t.badge}
             </p>
 
             <h2 className="font-display max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
-              Technologies I use to design, build and ship software.
+              {t.title}
             </h2>
           </div>
 
           <p className="max-w-md text-zinc-400 md:text-right">
-            From interface design to backend logic, mobile publishing,
-            databases, cloud tools and third-party integrations.
+            {t.description}
           </p>
         </Reveal>
 
-        <div className="mt-14 md:mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {stackGroups.map((group, index) => {
+        <div className="mt-14 grid gap-6 md:mt-20 md:grid-cols-2 xl:grid-cols-4">
+          {t.stackGroups.map((group, index) => {
             const Icon = group.icon
 
             return (

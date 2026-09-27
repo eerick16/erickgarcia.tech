@@ -1,10 +1,90 @@
 import { Reveal } from "../components/common/Reveal"
 import { Download, Mail, MapPin, Send } from "lucide-react"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { useLanguage } from "../context/useLanguage"
 
 export function ContactSection() {
+  const { language } = useLanguage()
+
+  const content = {
+    es: {
+      badge: "CONTACTO",
+      title: "Construyamos algo que realmente funcione.",
+      description: (
+        <>
+          Abierto a{" "}
+          <span className="font-semibold text-white">
+            oportunidades en ingeniería de software
+          </span>{" "}
+          donde pueda contribuir en{" "}
+          <span className="font-semibold text-white">
+            productos reales
+          </span>
+          , colaborar con{" "}
+          <span className="font-semibold text-white">
+            equipos de alto rendimiento
+          </span>{" "}
+          y continuar creciendo como{" "}
+          <span className="font-semibold text-[#00F5D4]">
+            Desarrollador Full Stack
+          </span>
+          .
+        </>
+      ),
+      sendEmail: "Enviar correo",
+      downloadCv: "Descargar CV",
+      viewProjects: "Ver proyectos",
+      emailLabel: "Correo electrónico",
+      githubLabel: "GitHub",
+      linkedinLabel: "LinkedIn",
+      locationLabel: "Ubicación",
+      locationValue: "Silao de la Victoria, Guanajuato, México",
+      footerCopyright:
+        "© 2026 Erick Alvarado García. Construido con React, TypeScript y Tailwind CSS.",
+      backToTop: "Volver arriba",
+    },
+    en: {
+      badge: "CONTACT",
+      title: "Let's build something that actually works.",
+      description: (
+        <>
+          Open to{" "}
+          <span className="font-semibold text-white">
+            software engineering opportunities
+          </span>{" "}
+          where I can contribute to{" "}
+          <span className="font-semibold text-white">
+            real products
+          </span>
+          , collaborate with{" "}
+          <span className="font-semibold text-white">
+            high-performing teams
+          </span>{" "}
+          and continue growing as a{" "}
+          <span className="font-semibold text-[#00F5D4]">
+            Full Stack Developer
+          </span>
+          .
+        </>
+      ),
+      sendEmail: "Send Email",
+      downloadCv: "Download CV",
+      viewProjects: "View Projects",
+      emailLabel: "Email",
+      githubLabel: "GitHub",
+      linkedinLabel: "LinkedIn",
+      locationLabel: "Location",
+      locationValue: "Silao de la Victoria, Guanajuato, Mexico",
+      footerCopyright:
+        "© 2026 Erick Alvarado García. Built with React, TypeScript and Tailwind CSS.",
+      backToTop: "Back to top",
+    },
+  }
+
+  const t = content[language]
+
   return (
-    <section id="contact" className="bg-[#09090B] px-6 py-24 md:py-32 text-white">
+    <section id="contact" className="bg-[#09090B] px-6 py-24 text-white md:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur md:p-14">
           <div className="absolute right-0 top-0 h-80 w-80 translate-x-1/3 -translate-y-1/3 rounded-full bg-[#00F5D4]/10 blur-3xl" />
@@ -13,31 +93,15 @@ export function ContactSection() {
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <Reveal direction="right">
               <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
-                Contact
+                {t.badge}
               </p>
 
               <h2 className="font-display max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
-                Let&apos;s build something that actually works.
+                {t.title}
               </h2>
 
               <p className="mt-8 max-w-2xl text-lg leading-9 text-zinc-400">
-                Open to{" "}
-                <span className="font-semibold text-white">
-                  software engineering opportunities
-                </span>
-                {" "}where I can contribute to{" "}
-                <span className="font-semibold text-white">
-                  real products
-                </span>
-                , collaborate with{" "}
-                <span className="font-semibold text-white">
-                  high-performing teams
-                </span>
-                {" "}and continue growing as a{" "}
-                <span className="font-semibold text-[#00F5D4]">
-                  Full Stack Developer
-                </span>
-                .
+                {t.description}
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -45,7 +109,7 @@ export function ContactSection() {
                   href="mailto:erickgc0125@gmail.com"
                   className="rounded-full bg-white px-7 py-3 font-semibold text-black transition hover:scale-105 hover:bg-zinc-200"
                 >
-                  Send Email
+                  {t.sendEmail}
                 </a>
 
                 <a
@@ -54,14 +118,14 @@ export function ContactSection() {
                   className="flex items-center gap-2 rounded-full border border-[#00F5D4]/30 bg-[#00F5D4]/10 px-7 py-3 font-semibold text-[#00F5D4] backdrop-blur transition hover:scale-105 hover:bg-[#00F5D4]/20"
                 >
                   <Download size={18} />
-                  Download CV
+                  {t.downloadCv}
                 </a>
 
                 <a
                   href="#projects"
                   className="rounded-full border border-white/15 bg-white/5 px-7 py-3 font-semibold text-white backdrop-blur transition hover:scale-105 hover:bg-white/10"
                 >
-                  View Projects
+                  {t.viewProjects}
                 </a>
               </div>
             </Reveal>
@@ -75,7 +139,7 @@ export function ContactSection() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-zinc-500">Email</p>
+                  <p className="text-sm text-zinc-500">{t.emailLabel}</p>
                   <p className="font-semibold text-zinc-200 group-hover:text-white">
                     erickgc0125@gmail.com
                   </p>
@@ -92,7 +156,7 @@ export function ContactSection() {
                   <FaGithub size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-zinc-500">GitHub</p>
+                  <p className="text-sm text-zinc-500">{t.githubLabel}</p>
                   <p className="font-semibold text-zinc-200 group-hover:text-white">
                     github.com/eerick16
                   </p>
@@ -109,7 +173,7 @@ export function ContactSection() {
                   <FaLinkedinIn size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-zinc-500">LinkedIn</p>
+                  <p className="text-sm text-zinc-500">{t.linkedinLabel}</p>
                   <p className="font-semibold text-zinc-200 group-hover:text-white">
                     linkedin.com/in/erick-alvarado-garcía
                   </p>
@@ -121,9 +185,9 @@ export function ContactSection() {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-zinc-500">Location</p>
+                  <p className="text-sm text-zinc-500">{t.locationLabel}</p>
                   <p className="font-semibold text-zinc-200">
-                    Silao de la Victoria, Guanajuato, Mexico
+                    {t.locationValue}
                   </p>
                 </div>
               </div>
@@ -132,12 +196,10 @@ export function ContactSection() {
         </div>
 
         <footer className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-zinc-500 md:flex-row">
-          <p>
-            © 2026 Erick Alvarado García. Built with React, TypeScript and Tailwind CSS.
-          </p>
+          <p>{t.footerCopyright}</p>
 
           <a href="#" className="flex items-center gap-2 transition hover:text-white">
-            Back to top <Send size={16} />
+            {t.backToTop} <Send size={16} />
           </a>
         </footer>
       </div>

@@ -1,46 +1,90 @@
 import { Reveal } from "../components/common/Reveal"
-
-const experiences = [
-  {
-    year: "2025 — Present",
-    title: "Full Stack Developer",
-    place: "Integra Connective",
-    logo: "/images/integra-logo.png",
-    description:
-      "Development of POS systems, e-commerce platforms, administrative dashboards and cross-platform mobile applications for real clients.",
-    tags: ["POS", "E-commerce", "PHP", "jQuery", "AJAX", ".NET MAUI", "C#", "MySQL", "APIs"],
-  },
-  {
-    year: "2023 — 2025",
-    title: "TSU in Software Development",
-    place: "Universidad Tecnológica de León",
-    logo: "/images/utl-logo.png",
-    description:
-      "Associate Degree focused on multiplatform software development, databases, web technologies and mobile applications.",
-    tags: ["Software Development", "Databases", "Web", "Mobile", "UX/UI Design", "Java", "OOP", "SQL"],
-  },
-  {
-    year: "2025 — 2027",
-    title: "B.S. in Software Engineering",
-    place: "Universidad Tecnológica de León",
-    logo: "/images/utl-logo.png",
-    description:
-      "Currently pursuing a Bachelor's Degree in Software Engineering, focused on software architecture, development management and scalable systems.",
-    tags: ["Engineering", "Software Architecture", "Software Management", "Scalable Systems", "TypeScript"],
-  },
-]
+import { useLanguage } from "../context/useLanguage"
 
 export function ExperienceSection() {
+  const { language } = useLanguage()
+
+  const content = {
+    es: {
+      badge: "EXPERIENCIA",
+      title: "Desde las bases académicas hasta sistemas listos para producción.",
+      experiences: [
+        {
+          year: "2025 — Presente",
+          title: "Desarrollador Full Stack",
+          place: "Integra Connective",
+          logo: "/images/integra-logo.png",
+          description:
+            "Desarrollo de sistemas POS, plataformas de e-commerce, dashboards administrativos y aplicaciones móviles multiplataforma para clientes reales.",
+          tags: ["POS", "E-commerce", "PHP", "jQuery", "AJAX", ".NET MAUI", "C#", "MySQL", "APIs"],
+        },
+        {
+          year: "2023 — 2025",
+          title: "TSU en Desarrollo de Software",
+          place: "Universidad Tecnológica de León",
+          logo: "/images/utl-logo.png",
+          description:
+            "Técnico Superior Universitario enfocado en desarrollo de software multiplataforma, bases de datos, tecnologías web y aplicaciones móviles.",
+          tags: ["Desarrollo de Software", "Bases de Datos", "Web", "Móvil", "Java", "POO", "SQL"],
+        },
+        {
+          year: "2025 — 2027",
+          title: "Ing. en Desarrollo y Gestión de Software",
+          place: "Universidad Tecnológica de León",
+          logo: "/images/utl-logo.png",
+          description:
+            "Actualmente cursando la Ingeniería enfocada en arquitectura de software, gestión de proyectos de desarrollo y sistemas escalables.",
+          tags: ["Ingeniería", "Arquitectura de Software", "Diseño UX/UI", "Gestión de Software", "Sistemas Escalables"],
+        },
+      ],
+    },
+    en: {
+      badge: "EXPERIENCE",
+      title: "From academic foundations to production-ready systems.",
+      experiences: [
+        {
+          year: "2025 — Present",
+          title: "Full Stack Developer",
+          place: "Integra Connective",
+          logo: "/images/integra-logo.png",
+          description:
+            "Development of POS systems, e-commerce platforms, administrative dashboards and cross-platform mobile applications for real clients.",
+          tags: ["POS", "E-commerce", "PHP", "jQuery", "AJAX", ".NET MAUI", "C#", "MySQL", "APIs"],
+        },
+        {
+          year: "2023 — 2025",
+          title: "TSU in Software Development",
+          place: "Universidad Tecnológica de León",
+          logo: "/images/utl-logo.png",
+          description:
+            "Associate Degree focused on multiplatform software development, databases, web technologies and mobile applications.",
+          tags: ["Software Development", "Databases", "Web", "Mobile", "Java", "OOP", "SQL"],
+        },
+        {
+          year: "2025 — 2027",
+          title: "B.S. in Software Engineering",
+          place: "Universidad Tecnológica de León",
+          logo: "/images/utl-logo.png",
+          description:
+            "Currently pursuing a Bachelor's Degree in Software Engineering, focused on software architecture, development management and scalable systems.",
+          tags: ["Engineering", "Software Architecture", "UX/UI Design", "Software Management", "Scalable Systems"],
+        },
+      ],
+    },
+  }
+
+  const t = content[language]
+
   return (
     <section id="experience" className="bg-[#09090B] px-6 py-24 text-white md:py-32">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
-            Experience
+            {t.badge}
           </p>
 
           <h2 className="font-display max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
-            From academic foundations to production-ready systems.
+            {t.title}
           </h2>
         </Reveal>
 
@@ -49,7 +93,7 @@ export function ExperienceSection() {
           <div className="absolute left-6 top-0 h-full w-px bg-white/10 md:left-1/2" />
 
           <div className="space-y-12">
-            {experiences.map((item, index) => {
+            {t.experiences.map((item, index) => {
               const isLeft = index % 2 === 0
 
               return (

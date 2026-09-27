@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { X } from "lucide-react"
 import { motion } from "motion/react"
+import { useLanguage } from "../../context/useLanguage"
 
 type ProjectModalProps = {
   project: {
@@ -14,6 +15,7 @@ type ProjectModalProps = {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const { language } = useLanguage()
 
   useEffect(() => {
     if (!project) return
@@ -32,6 +34,21 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       document.body.style.overflow = ""
     }
   }, [project, onClose])
+
+  const content = {
+    es: {
+      overview: "RESUMEN",
+      impact: "IMPACTO",
+      technologies: "TECNOLOGÍAS",
+    },
+    en: {
+      overview: "OVERVIEW",
+      impact: "IMPACT",
+      technologies: "TECHNOLOGIES",
+    },
+  }
+
+  const t = content[language]
 
   if (!project) return null
 
@@ -69,7 +86,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
             <p className="mb-3 text-sm uppercase tracking-[0.2em] text-[#00F5D4]">
-              Overview
+              {t.overview}
             </p>
             <p className="leading-8 text-zinc-400">
               {project.description}
@@ -78,7 +95,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
             <p className="mb-3 text-sm uppercase tracking-[0.2em] text-[#00F5D4]">
-              Impact
+              {t.impact}
             </p>
             <p className="leading-8 text-zinc-400">
               {project.impact}
@@ -88,7 +105,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.04] p-6">
           <p className="mb-4 text-sm uppercase tracking-[0.2em] text-[#00F5D4]">
-            Technologies
+            {t.technologies}
           </p>
 
           <div className="flex flex-wrap gap-3">

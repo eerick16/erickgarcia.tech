@@ -1,21 +1,7 @@
 import { useEffect } from "react"
 import { X } from "lucide-react"
 import { motion } from "motion/react"
-
-const certifications = [
-  {
-    title: "User Experience Design Fundamentals",
-    image: "/images/certifications/ux-fundamentals.jpg",
-  },
-  {
-    title: "Empathize, Define and Ideate",
-    image: "/images/certifications/ux-process.jpg",
-  },
-  {
-    title: "Wireframes and Low-Fidelity Prototypes",
-    image: "/images/certifications/ux-wireframes.jpg",
-  },
-]
+import { useLanguage } from "../../context/useLanguage"
 
 type CertificationsModalProps = {
   isOpen: boolean
@@ -23,6 +9,8 @@ type CertificationsModalProps = {
 }
 
 export function CertificationsModal({ isOpen, onClose }: CertificationsModalProps) {
+  const { language } = useLanguage()
+
   useEffect(() => {
     if (!isOpen) return
 
@@ -38,6 +26,47 @@ export function CertificationsModal({ isOpen, onClose }: CertificationsModalProp
       document.body.style.overflow = ""
     }
   }, [isOpen, onClose])
+
+  const content = {
+    es: {
+      badge: "CERTIFICACIONES",
+      title: "Certificaciones en Diseño UX",
+      certifications: [
+        {
+          title: "Fundamentos del Diseño de Experiencia de Usuario",
+          image: "/images/certifications/ux-fundamentals.jpg",
+        },
+        {
+          title: "Empatizar, Definir e Idear",
+          image: "/images/certifications/ux-process.jpg",
+        },
+        {
+          title: "Wireframes y Prototipos de Baja Fidelidad",
+          image: "/images/certifications/ux-wireframes.jpg",
+        },
+      ],
+    },
+    en: {
+      badge: "CERTIFICATIONS",
+      title: "UX Design Certifications",
+      certifications: [
+        {
+          title: "User Experience Design Fundamentals",
+          image: "/images/certifications/ux-fundamentals.jpg",
+        },
+        {
+          title: "Empathize, Define and Ideate",
+          image: "/images/certifications/ux-process.jpg",
+        },
+        {
+          title: "Wireframes and Low-Fidelity Prototypes",
+          image: "/images/certifications/ux-wireframes.jpg",
+        },
+      ],
+    },
+  }
+
+  const t = content[language]
 
   if (!isOpen) return null
 
@@ -64,15 +93,15 @@ export function CertificationsModal({ isOpen, onClose }: CertificationsModalProp
         </button>
 
         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
-          Certifications
+          {t.badge}
         </p>
 
         <h3 className="font-display text-4xl font-black tracking-tight md:text-6xl">
-          UX Design Certifications
+          {t.title}
         </h3>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {certifications.map((cert) => (
+          {t.certifications.map((cert) => (
             <article
               key={cert.title}
               className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]"

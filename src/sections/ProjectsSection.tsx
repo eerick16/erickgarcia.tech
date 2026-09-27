@@ -16,9 +16,7 @@ import {
   Smartphone,
 } from "lucide-react"
 
-import { 
-  FaGithub
-} from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 
 import {
   type PointerEvent as ReactPointerEvent,
@@ -28,200 +26,10 @@ import {
 } from "react"
 
 import { Reveal } from "../components/common/Reveal"
-
-const projects = [
-  {
-    title: "DentIQ App",
-    type: "Mobile App",
-    overview:
-      "Cross-platform mobile app rebuilt from Xamarin to .NET MAUI, redesigned with a modern interface and expanded with social features such as friends, duels, rankings, messaging and notifications.",
-    impact:
-      "Transformed an exam-focused dental app into an interactive and social learning experience.",
-    technologies: [
-      ".NET MAUI",
-      "XAML",
-      "OAuth 2.0",
-      "Push Notifications",
-      "Mobile",
-    ],
-    icon: Smartphone,
-    images: [
-      "/images/projects/dentiq/1.jpg",
-      "/images/projects/dentiq/2.jpg",
-      "/images/projects/dentiq/3.jpg",
-      "/images/projects/dentiq/4.jpg",
-      "/images/projects/dentiq/5.jpg",
-      "/images/projects/dentiq/6.jpg",
-      "/images/projects/dentiq/7.jpg",
-    ],
-    links: {
-      playStore: "", // En proceso
-      appStore: "",
-      github: "",
-    },
-  },
-  {
-    title: "Bella Sofía Mobile E-commerce",
-    type: "Mobile E-commerce",
-    overview:
-      "Production-ready mobile e-commerce application published on the Play Store, featuring product catalog navigation, secure checkout flows, and payment gateway integrations.",
-    impact:
-      "Delivered a mobile-first commercial sales channel for end customers.",
-    technologies: [".NET MAUI", "C#", "Stripe API", "Google Play"],
-    icon: ShoppingCart,
-    images: [
-      "/images/projects/bellasofia-mobile/1.jpg",
-      "/images/projects/bellasofia-mobile/2.jpg",
-      "/images/projects/bellasofia-mobile/3.jpg",
-      "/images/projects/bellasofia-mobile/4.jpg",
-      "/images/projects/bellasofia-mobile/5.jpg",
-    ],
-    links: {
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.integra.bellaSofia&hl=es_MX",
-      github: "",
-    },
-  },
-  {
-    title: "Bella Sofía Web E-commerce",
-    type: "E-commerce Platform",
-    overview:
-      "Online store connected to commercial processes, including product catalogue, shopping flow, backend services and payment integration.",
-    impact:
-      "Built a functional sales channel connected to real business operations.",
-    technologies: ["PHP", "JavaScript", "jQuery", "MySQL", "Stripe"],
-    icon: ShoppingBag,
-    images: [
-      "/images/projects/bellasofia-web/1.jpg",
-      "/images/projects/bellasofia-web/2.jpg",
-      "/images/projects/bellasofia-web/3.jpg",
-    ],
-    links: {
-      website: "https://bellasofia.integradesarrollo.com/index.php",
-      github: "",
-    },
-  },
-  {
-    title: "Custom Enterprise POS Suite",
-    type: "Business Systems",
-    overview:
-      "Development and optimisation of POS systems and administrative dashboards for commercial clients (Cilo, Cohoba, BellaSofía, Eurocycle, Funmex), including sales loading, inventory workflows, database logic and backend services.",
-    impact:
-      "Improved performance and usability for custom business operations handling large datasets.",
-    technologies: [
-      "PHP",
-      "JavaScript",
-      "MySQL",
-      "Stored Procedures",
-      "APIs",
-      "Figma",
-    ],
-    icon: Database,
-    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
-    confidential: true,
-    links: {
-      figma: "",
-    },
-  },
-  {
-    title: "Field Operations & Logistics Apps",
-    type: "Enterprise Mobile Apps",
-    overview:
-      "Suite of specialized mobile apps for field teams: Funmex (sales contracts & collections), Eurocycle (hazardous waste route collection), and Costa Rica (offline-first order delivery tracking).",
-    impact:
-      "Streamlined logistics and collection workflows with offline database sync capabilities.",
-    technologies: [
-      ".NET MAUI",
-      "SQLite",
-      "Offline Sync",
-      "REST APIs",
-      "Figma",
-    ],
-    icon: PackageCheck,
-    images: ["/default.jpg", "/default.jpg", "/default.jpg"],
-    confidential: true,
-    links: {
-      figma: "",
-    },
-  },
-  {
-    title: "Casa León E-commerce & Business ERP",
-    type: "Full Stack Web System",
-    overview:
-      "University web ecosystem combining a leather product online store with an internal business management system for sales tracking, raw material management, quotes, suppliers, and customer databases.",
-    impact:
-      "Integrated front-facing sales with back-office supply chain and resource management.",
-    technologies: ["Python", "Angular", "MongoDB", "HTML/CSS", "Bootstrap"],
-    icon: Globe,
-    images: [
-      "/images/projects/marroquineria/1.jpg",
-      "/images/projects/marroquineria/2.jpg",
-      "/images/projects/marroquineria/3.jpg",
-      "/images/projects/marroquineria/4.jpg",
-      "/images/projects/marroquineria/5.jpg",
-      "/images/projects/marroquineria/6.jpg",
-      "/images/projects/marroquineria/7.jpg",
-      "/images/projects/marroquineria/8.jpg",
-      "/images/projects/marroquineria/9.jpg"],
-    links: {
-      github: "",
-    },
-  },
-  {
-    title: "Volts — IoT Companion & Web Platform",
-    type: "IoT + Mobile + Web",
-    overview:
-      "Integrative system featuring a physical eco-friendly companion robot made from reused materials, a mobile app to interact with and control the robot via Firebase, and an e-commerce web platform for institutional packages.",
-    impact:
-      "Combined hardware interaction, gamified social responsibility messages, and an e-commerce platform.",
-    technologies: [
-      "IoT",
-      "Arduino IDE",
-      "Firebase",
-      "Mobile App",
-      "Web E-commerce",
-      "Kotlin",
-      "React/Mongo",
-    ],
-    icon: Cpu,
-    images: [
-      "/images/projects/pawsome-iot/1.jpg", 
-      "/images/projects/pawsome-iot/2.jpg", 
-      "/images/projects/pawsome-iot/3.jpg", 
-      "/images/projects/pawsome-iot/4.jpg",
-      "/images/projects/pawsome-iot/5.jpg",
-      "/images/projects/pawsome-iot/6.jpg",
-      "/images/projects/pawsome-iot/7.jpg",
-      "/images/projects/pawsome-iot/8.jpg",
-      "/images/projects/pawsome-iot/9.jpg",
-      "/images/projects/pawsome-iot/10.jpg",
-      "/images/projects/pawsome-iot/11.jpg",
-      "/images/projects/pawsome-iot/12.jpg",
-      "/images/projects/pawsome-iot/13.jpg"
-    ],
-    links: {
-      github: "https://github.com/IDGS-801-23001542/volts.git",
-    },
-  },
-  {
-    title: "AI Predictive Model & System",
-    type: "Machine Learning / R&D",
-    overview:
-      "Ongoing development project exploring machine learning / AI model training and implementation for automated data prediction and decision-making.",
-    impact:
-      "Active research and development project focused on AI integration.",
-    technologies: ["Python", "Machine Learning", "UML Modeling", "AI"],
-    icon: Layout,
-    images: ["/default.jpg", "/default.jpg"],
-    links: {
-      github: "",
-    },
-  },
-]
-
-type Project = (typeof projects)[number]
+import { useLanguage } from "../context/useLanguage"
 
 export function ProjectsSection() {
+  const { language } = useLanguage()
   const [projectIndex, setProjectIndex] = useState(0)
   const [imageIndex, setImageIndex] = useState(0)
   const [isImageHovered, setIsImageHovered] = useState(false)
@@ -229,7 +37,412 @@ export function ProjectsSection() {
 
   const pointerStartX = useRef<number | null>(null)
 
-  const project: Project = projects[projectIndex]
+  const content = {
+    es: {
+      badge: "PROYECTOS",
+      title: "Trabajos seleccionados creados para usuarios y necesidades reales de negocio.",
+      subtitleMain: "Una mezcla de ",
+      subtitleHighlight1: "trabajo profesional",
+      subtitleText2: ", desarrollo móvil y sistemas empresariales donde el ",
+      subtitleHighlight2: "diseño",
+      subtitleText3: ", la ",
+      subtitleHighlight3: "lógica",
+      subtitleText4: " y el ",
+      subtitleHighlight4: "rendimiento",
+      subtitleText5: " importan por igual.",
+      btnGithub: "Repositorio GitHub",
+      btnPlayStore: "Ver en Play Store",
+      btnWebsite: "Visitar Sitio Web",
+      btnFigma: "Prototipo Interactivo Figma",
+      statusReview: "En revisión para Play Store",
+      statusNda: "Protegido por NDA (Interfaz recreada)",
+      figmaBadge: "Diseño de Concepto en Figma",
+      confidentialTag: "Confidencial",
+      btnPrevious: "Anterior",
+      btnNext: "Siguiente",
+      projectsList: [
+        {
+          title: "DentIQ App",
+          type: "Aplicación Móvil",
+          overview:
+            "Aplicación móvil multiplataforma migrada de Xamarin a .NET MAUI, rediseñada con una interfaz moderna e integrada con funciones sociales como amigos, duelos, rankings, mensajería y notificaciones push.",
+          impact:
+            "Transformó una aplicación de exámenes dentales en una experiencia de aprendizaje interactiva y social.",
+          technologies: [
+            ".NET MAUI",
+            "XAML",
+            "OAuth 2.0",
+            "Push Notifications",
+            "Mobile",
+          ],
+          icon: Smartphone,
+          images: [
+            "/images/projects/dentiq/1.jpg",
+            "/images/projects/dentiq/2.jpg",
+            "/images/projects/dentiq/3.jpg",
+            "/images/projects/dentiq/4.jpg",
+            "/images/projects/dentiq/5.jpg",
+            "/images/projects/dentiq/6.jpg",
+            "/images/projects/dentiq/7.jpg",
+          ],
+          links: { playStore: "", appStore: "", github: "" },
+        },
+        {
+          title: "Bella Sofía Mobile E-commerce",
+          type: "E-commerce Móvil",
+          overview:
+            "Aplicación de comercio electrónico móvil publicada en Play Store, con navegación por catálogo, flujos de pago seguros e integración de pasarelas de pago.",
+          impact:
+            "Ofreció un canal comercial directo en dispositivos móviles para clientes finales.",
+          technologies: [".NET MAUI", "C#", "Stripe API", "Google Play"],
+          icon: ShoppingCart,
+          images: [
+            "/images/projects/bellasofia-mobile/1.jpg",
+            "/images/projects/bellasofia-mobile/2.jpg",
+            "/images/projects/bellasofia-mobile/3.jpg",
+            "/images/projects/bellasofia-mobile/4.jpg",
+            "/images/projects/bellasofia-mobile/5.jpg",
+          ],
+          links: {
+            playStore:
+              "https://play.google.com/store/apps/details?id=com.integra.bellaSofia&hl=es_MX",
+            github: "",
+          },
+        },
+        {
+          title: "Bella Sofía Web E-commerce",
+          type: "Plataforma E-commerce",
+          overview:
+            "Tienda en línea conectada a procesos comerciales, incluyendo catálogo de productos, flujo de compra, servicios backend e integración de pagos.",
+          impact:
+            "Construyó un canal de ventas funcional conectado a operaciones comerciales reales.",
+          technologies: ["PHP", "JavaScript", "jQuery", "MySQL", "Stripe"],
+          icon: ShoppingBag,
+          images: [
+            "/images/projects/bellasofia-web/1.jpg",
+            "/images/projects/bellasofia-web/2.jpg",
+            "/images/projects/bellasofia-web/3.jpg",
+          ],
+          links: {
+            website: "https://bellasofia.integradesarrollo.com/index.php",
+            github: "",
+          },
+        },
+        {
+          title: "Custom Enterprise POS Suite",
+          type: "Sistemas Empresariales",
+          overview:
+            "Desarrollo y optimización de sistemas punto de venta (POS) y dashboards administrativos para clientes comerciales (Cilo, Cohoba, BellaSofía, Eurocycle, Funmex), incluyendo carga de ventas, inventarios, lógica en BD y servicios backend.",
+          impact:
+            "Mejoró el rendimiento y la usabilidad en operaciones con grandes volúmenes de datos.",
+          technologies: [
+            "PHP",
+            "JavaScript",
+            "MySQL",
+            "Stored Procedures",
+            "APIs",
+            "Figma",
+          ],
+          icon: Database,
+          images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+          confidential: true,
+          links: { figma: "" },
+        },
+        {
+          title: "Field Operations & Logistics Apps",
+          type: "Apps Móviles Empresariales",
+          overview:
+            "Suite de aplicaciones móviles especializadas para equipos de campo: Funmex (contratos de venta y cobros), Eurocycle (recolección de residuos peligrosos) y Costa Rica (rastreo de entregas con sincronización offline).",
+          impact:
+            "Optimizó la logística y cobros con capacidad de sincronización de datos offline en SQLite.",
+          technologies: [
+            ".NET MAUI",
+            "SQLite",
+            "Offline Sync",
+            "REST APIs",
+            "Figma",
+          ],
+          icon: PackageCheck,
+          images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+          confidential: true,
+          links: { figma: "" },
+        },
+        {
+          title: "Casa León E-commerce & Business ERP",
+          type: "Sistema Web Full Stack",
+          overview:
+            "Ecosistema web universitario que combina una tienda en línea de productos de piel con un sistema interno de gestión empresarial para ventas, materia prima, cotizaciones, proveedores y clientes.",
+          impact:
+            "Integró las ventas al cliente final con la cadena de suministro y recursos internos.",
+          technologies: ["Python", "Angular", "MongoDB", "HTML/CSS", "Bootstrap"],
+          icon: Globe,
+          images: [
+            "/images/projects/marroquineria/1.jpg",
+            "/images/projects/marroquineria/2.jpg",
+            "/images/projects/marroquineria/3.jpg",
+            "/images/projects/marroquineria/4.jpg",
+            "/images/projects/marroquineria/5.jpg",
+            "/images/projects/marroquineria/6.jpg",
+            "/images/projects/marroquineria/7.jpg",
+            "/images/projects/marroquineria/8.jpg",
+            "/images/projects/marroquineria/9.jpg",
+          ],
+          links: { github: "" },
+        },
+        {
+          title: "Volts — IoT Companion & Web Platform",
+          type: "IoT + Móvil + Web",
+          overview:
+            "Sistema integral con un robot compañero ecológico de materiales reciclados, app móvil para control e interacción mediante Firebase y plataforma web e-commerce para paquetes institucionales.",
+          impact:
+            "Combinó interacción con hardware, mensajes de responsabilidad social gamificados y comercio electrónico.",
+          technologies: [
+            "IoT",
+            "Arduino IDE",
+            "Firebase",
+            "Mobile App",
+            "Web E-commerce",
+            "Kotlin",
+            "React/Mongo",
+            "Illustrator",
+            "Animate"
+          ],
+          icon: Cpu,
+          images: [
+            "/images/projects/pawsome-iot/1.jpg",
+            "/images/projects/pawsome-iot/2.jpg",
+            "/images/projects/pawsome-iot/3.jpg",
+            "/images/projects/pawsome-iot/4.jpg",
+            "/images/projects/pawsome-iot/5.jpg",
+            "/images/projects/pawsome-iot/6.jpg",
+            "/images/projects/pawsome-iot/7.jpg",
+            "/images/projects/pawsome-iot/8.jpg",
+            "/images/projects/pawsome-iot/9.jpg",
+            "/images/projects/pawsome-iot/10.jpg",
+            "/images/projects/pawsome-iot/11.jpg",
+            "/images/projects/pawsome-iot/12.jpg",
+            "/images/projects/pawsome-iot/13.jpg",
+          ],
+          links: { github: "https://github.com/IDGS-801-23001542/volts.git" },
+        },
+        {
+          title: "AI Predictive Model & System",
+          type: "Machine Learning / I+D",
+          overview:
+            "Proyecto de desarrollo enfocado en el entrenamiento e implementación de modelos de aprendizaje automático / IA para predicción de datos y toma de decisiones automatizada.",
+          impact:
+            "Proyecto activo de investigación y desarrollo enfocado en integración de Inteligencia Artificial.",
+          technologies: ["Python", "Machine Learning", "UML Modeling", "AI"],
+          icon: Layout,
+          images: ["/default.jpg", "/default.jpg"],
+          links: { github: "" },
+        },
+      ],
+    },
+    en: {
+      badge: "PROJECTS",
+      title: "Selected work built for real users and real business needs.",
+      subtitleMain: "A mix of ",
+      subtitleHighlight1: "professional work",
+      subtitleText2: ", mobile development and business systems where ",
+      subtitleHighlight2: "design",
+      subtitleText3: ", ",
+      subtitleHighlight3: "logic",
+      subtitleText4: " and ",
+      subtitleHighlight4: "performance",
+      subtitleText5: " matter equally.",
+      btnGithub: "GitHub Repo",
+      btnPlayStore: "Get on Play Store",
+      btnWebsite: "Visit Live Website",
+      btnFigma: "Interactive Figma Prototype",
+      statusReview: "Play Store Review in Progress",
+      statusNda: "Protected under NDA (Recreated UI)",
+      figmaBadge: "Figma Concept UI",
+      confidentialTag: "Confidential",
+      btnPrevious: "Previous",
+      btnNext: "Next",
+      projectsList: [
+        {
+          title: "DentIQ App",
+          type: "Mobile App",
+          overview:
+            "Cross-platform mobile app rebuilt from Xamarin to .NET MAUI, redesigned with a modern interface and expanded with social features such as friends, duels, rankings, messaging and notifications.",
+          impact:
+            "Transformed an exam-focused dental app into an interactive and social learning experience.",
+          technologies: [
+            ".NET MAUI",
+            "XAML",
+            "OAuth 2.0",
+            "Push Notifications",
+            "Mobile",
+          ],
+          icon: Smartphone,
+          images: [
+            "/images/projects/dentiq/1.jpg",
+            "/images/projects/dentiq/2.jpg",
+            "/images/projects/dentiq/3.jpg",
+            "/images/projects/dentiq/4.jpg",
+            "/images/projects/dentiq/5.jpg",
+            "/images/projects/dentiq/6.jpg",
+            "/images/projects/dentiq/7.jpg",
+          ],
+          links: { playStore: "", appStore: "", github: "" },
+        },
+        {
+          title: "Bella Sofía Mobile E-commerce",
+          type: "Mobile E-commerce",
+          overview:
+            "Production-ready mobile e-commerce application published on the Play Store, featuring product catalog navigation, secure checkout flows, and payment gateway integrations.",
+          impact:
+            "Delivered a mobile-first commercial sales channel for end customers.",
+          technologies: [".NET MAUI", "C#", "Stripe API", "Google Play"],
+          icon: ShoppingCart,
+          images: [
+            "/images/projects/bellasofia-mobile/1.jpg",
+            "/images/projects/bellasofia-mobile/2.jpg",
+            "/images/projects/bellasofia-mobile/3.jpg",
+            "/images/projects/bellasofia-mobile/4.jpg",
+            "/images/projects/bellasofia-mobile/5.jpg",
+          ],
+          links: {
+            playStore:
+              "https://play.google.com/store/apps/details?id=com.integra.bellaSofia&hl=es_MX",
+            github: "",
+          },
+        },
+        {
+          title: "Bella Sofía Web E-commerce",
+          type: "E-commerce Platform",
+          overview:
+            "Online store connected to commercial processes, including product catalogue, shopping flow, backend services and payment integration.",
+          impact:
+            "Built a functional sales channel connected to real business operations.",
+          technologies: ["PHP", "JavaScript", "jQuery", "MySQL", "Stripe"],
+          icon: ShoppingBag,
+          images: [
+            "/images/projects/bellasofia-web/1.jpg",
+            "/images/projects/bellasofia-web/2.jpg",
+            "/images/projects/bellasofia-web/3.jpg",
+          ],
+          links: {
+            website: "https://bellasofia.integradesarrollo.com/index.php",
+            github: "",
+          },
+        },
+        {
+          title: "Custom Enterprise POS Suite",
+          type: "Business Systems",
+          overview:
+            "Development and optimisation of POS systems and administrative dashboards for commercial clients (Cilo, Cohoba, BellaSofía, Eurocycle, Funmex), including sales loading, inventory workflows, database logic and backend services.",
+          impact:
+            "Improved performance and usability for custom business operations handling large datasets.",
+          technologies: [
+            "PHP",
+            "JavaScript",
+            "MySQL",
+            "Stored Procedures",
+            "APIs",
+            "Figma",
+          ],
+          icon: Database,
+          images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+          confidential: true,
+          links: { figma: "" },
+        },
+        {
+          title: "Field Operations & Logistics Apps",
+          type: "Enterprise Mobile Apps",
+          overview:
+            "Suite of specialized mobile apps for field teams: Funmex (sales contracts & collections), Eurocycle (hazardous waste route collection), and Costa Rica (offline-first order delivery tracking).",
+          impact:
+            "Streamlined logistics and collection workflows with offline database sync capabilities.",
+          technologies: [
+            ".NET MAUI",
+            "SQLite",
+            "Offline Sync",
+            "REST APIs",
+            "Figma",
+          ],
+          icon: PackageCheck,
+          images: ["/default.jpg", "/default.jpg", "/default.jpg"],
+          confidential: true,
+          links: { figma: "" },
+        },
+        {
+          title: "Casa León E-commerce & Business ERP",
+          type: "Full Stack Web System",
+          overview:
+            "University web ecosystem combining a leather product online store with an internal business management system for sales tracking, raw material management, quotes, suppliers, and customer databases.",
+          impact:
+            "Integrated front-facing sales with back-office supply chain and resource management.",
+          technologies: ["Python", "Angular", "MongoDB", "HTML/CSS", "Bootstrap"],
+          icon: Globe,
+          images: [
+            "/images/projects/marroquineria/1.jpg",
+            "/images/projects/marroquineria/2.jpg",
+            "/images/projects/marroquineria/3.jpg",
+            "/images/projects/marroquineria/4.jpg",
+            "/images/projects/marroquineria/5.jpg",
+            "/images/projects/marroquineria/6.jpg",
+            "/images/projects/marroquineria/7.jpg",
+            "/images/projects/marroquineria/8.jpg",
+            "/images/projects/marroquineria/9.jpg",
+          ],
+          links: { github: "" },
+        },
+        {
+          title: "Volts — IoT Companion & Web Platform",
+          type: "IoT + Mobile + Web",
+          overview:
+            "Integrative system featuring a physical eco-friendly companion robot made from reused materials, a mobile app to interact with and control the robot via Firebase, and an e-commerce web platform for institutional packages.",
+          impact:
+            "Combined hardware interaction, gamified social responsibility messages, and an e-commerce platform.",
+          technologies: [
+            "IoT",
+            "Arduino IDE",
+            "Firebase",
+            "Mobile App",
+            "Web E-commerce",
+            "Kotlin",
+            "React/Mongo",
+          ],
+          icon: Cpu,
+          images: [
+            "/images/projects/pawsome-iot/1.jpg",
+            "/images/projects/pawsome-iot/2.jpg",
+            "/images/projects/pawsome-iot/3.jpg",
+            "/images/projects/pawsome-iot/4.jpg",
+            "/images/projects/pawsome-iot/5.jpg",
+            "/images/projects/pawsome-iot/6.jpg",
+            "/images/projects/pawsome-iot/7.jpg",
+            "/images/projects/pawsome-iot/8.jpg",
+            "/images/projects/pawsome-iot/9.jpg",
+            "/images/projects/pawsome-iot/10.jpg",
+            "/images/projects/pawsome-iot/11.jpg",
+            "/images/projects/pawsome-iot/12.jpg",
+            "/images/projects/pawsome-iot/13.jpg",
+          ],
+          links: { github: "https://github.com/IDGS-801-23001542/volts.git" },
+        },
+        {
+          title: "AI Predictive Model & System",
+          type: "Machine Learning / R&D",
+          overview:
+            "Ongoing development project exploring machine learning / AI model training and implementation for automated data prediction and decision-making.",
+          impact:
+            "Active research and development project focused on AI integration.",
+          technologies: ["Python", "Machine Learning", "UML Modeling", "AI"],
+          icon: Layout,
+          images: ["/default.jpg", "/default.jpg"],
+          links: { github: "" },
+        },
+      ],
+    },
+  }
+
+  const t = content[language]
+  const projectsList = t.projectsList
+  const project = projectsList[projectIndex]
   const Icon = project.icon
 
   const normaliseIndex = (index: number, length: number) =>
@@ -243,8 +456,7 @@ export function ProjectsSection() {
     window.setTimeout(() => {
       setProjectIndex((currentIndex) => {
         const movement = direction === "next" ? 1 : -1
-
-        return normaliseIndex(currentIndex + movement, projects.length)
+        return normaliseIndex(currentIndex + movement, projectsList.length)
       })
 
       setImageIndex(0)
@@ -260,11 +472,7 @@ export function ProjectsSection() {
 
     setImageIndex((currentIndex) => {
       const movement = direction === "next" ? 1 : -1
-
-      return normaliseIndex(
-        currentIndex + movement,
-        project.images.length,
-      )
+      return normaliseIndex(currentIndex + movement, project.images.length)
     })
   }
 
@@ -272,21 +480,15 @@ export function ProjectsSection() {
     setImageIndex(index)
   }
 
-  const handlePointerDown = (
-    event: ReactPointerEvent<HTMLDivElement>,
-  ) => {
+  const handlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     pointerStartX.current = event.clientX
     event.currentTarget.setPointerCapture(event.pointerId)
   }
 
-  const handlePointerUp = (
-    event: ReactPointerEvent<HTMLDivElement>,
-  ) => {
+  const handlePointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (pointerStartX.current === null) return
 
-    const travelledDistance =
-      event.clientX - pointerStartX.current
-
+    const travelledDistance = event.clientX - pointerStartX.current
     const dragThreshold = 45
 
     if (travelledDistance > dragThreshold) {
@@ -313,10 +515,7 @@ export function ProjectsSection() {
 
     const interval = window.setInterval(() => {
       setImageIndex((currentIndex) =>
-        normaliseIndex(
-          currentIndex + 1,
-          project.images.length,
-        ),
+        normaliseIndex(currentIndex + 1, project.images.length)
       )
     }, 4500)
 
@@ -330,39 +529,38 @@ export function ProjectsSection() {
     >
       {/* Background lights */}
       <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#00F5D4]/5 blur-[130px]" />
-
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-[#8B5CF6]/10 blur-[130px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#00F5D4]">
-              Projects
+              {t.badge}
             </p>
 
             <h2 className="font-display max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
-              Selected work built for real users and real business needs.
+              {t.title}
             </h2>
           </div>
 
           <p className="max-w-md text-zinc-400 md:text-right">
-            A mix of{" "}
+            {t.subtitleMain}
             <span className="font-semibold text-white">
-              professional work
+              {t.subtitleHighlight1}
             </span>
-            , mobile development and business systems where{" "}
+            {t.subtitleText2}
             <span className="font-semibold text-white">
-              design
+              {t.subtitleHighlight2}
             </span>
-            ,{" "}
+            {t.subtitleText3}
             <span className="font-semibold text-white">
-              logic
-            </span>{" "}
-            and{" "}
+              {t.subtitleHighlight3}
+            </span>
+            {t.subtitleText4}
             <span className="font-semibold text-white">
-              performance
-            </span>{" "}
-            matter equally.
+              {t.subtitleHighlight4}
+            </span>
+            {t.subtitleText5}
           </p>
         </Reveal>
 
@@ -397,7 +595,6 @@ export function ProjectsSection() {
               }`}
             >
               <div className="pointer-events-none absolute left-0 top-0 h-72 w-72 -translate-x-1/3 -translate-y-1/3 rounded-full bg-[#00F5D4]/10 blur-3xl" />
-
               <div className="pointer-events-none absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 translate-y-1/3 rounded-full bg-[#8B5CF6]/10 blur-3xl" />
 
               <div className="relative z-10 grid lg:min-h-[650px] lg:grid-cols-[0.95fr_1.05fr]">
@@ -420,9 +617,9 @@ export function ProjectsSection() {
                       </div>
                     </div>
 
-                    {project.confidential && (
+                    {"confidential" in project && project.confidential && (
                       <span className="hidden rounded-full border border-purple-500/30 bg-purple-500/10 px-3 py-1.5 text-xs font-medium text-purple-300 sm:block">
-                        Confidential
+                        {t.confidentialTag}
                       </span>
                     )}
                   </div>
@@ -474,7 +671,7 @@ export function ProjectsSection() {
                         className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:scale-105 hover:border-[#00F5D4]/50 hover:bg-[#00F5D4]/10 hover:text-[#00F5D4]"
                       >
                         <FaGithub size={18} />
-                        GitHub Repo
+                        {t.btnGithub}
                       </a>
                     )}
 
@@ -486,7 +683,7 @@ export function ProjectsSection() {
                         className="inline-flex items-center gap-2 rounded-full border border-[#00F5D4] bg-[#00F5D4] px-6 py-3 text-sm font-bold text-black shadow-[0_0_20px_rgba(0,245,212,0.35)] transition hover:scale-105 hover:bg-[#00F5D4]/90"
                       >
                         <ExternalLink size={18} />
-                        Get on Play Store
+                        {t.btnPlayStore}
                       </a>
                     )}
 
@@ -498,7 +695,7 @@ export function ProjectsSection() {
                         className="inline-flex items-center gap-2 rounded-full border border-[#00F5D4] bg-[#00F5D4] px-6 py-3 text-sm font-bold text-black shadow-[0_0_20px_rgba(0,245,212,0.35)] transition hover:scale-105 hover:bg-[#00F5D4]/90"
                       >
                         <ExternalLink size={18} />
-                        Visit Live Website
+                        {t.btnWebsite}
                       </a>
                     )}
 
@@ -510,31 +707,31 @@ export function ProjectsSection() {
                         className="inline-flex items-center gap-2 rounded-full border border-purple-500/40 bg-purple-500/10 px-5 py-3 text-sm font-semibold text-purple-300 transition hover:scale-105 hover:bg-purple-500/20"
                       >
                         <ExternalLink size={18} />
-                        Interactive Figma Prototype
+                        {t.btnFigma}
                       </a>
                     )}
 
                     {/* Banner En Proceso */}
                     {"playStore" in project.links &&
                       project.links.playStore === "" &&
-                      !project.confidential && (
+                      !("confidential" in project && project.confidential) && (
                         <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2.5 text-xs font-semibold text-amber-400 backdrop-blur-md">
                           <Clock size={15} />
-                          Play Store Review in Progress
+                          {t.statusReview}
                         </div>
                       )}
 
                     {/* Banner Confidencial / NDA */}
-                    {project.confidential && (
+                    {"confidential" in project && project.confidential && (
                       <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2.5 text-xs font-semibold text-purple-300 backdrop-blur-md">
                         <Lock size={15} />
-                        Protected under NDA (Recreated UI)
+                        {t.statusNda}
                       </div>
                     )}
                   </div>
                 </div>
 
-                {/* Image carousel ajustado con object-contain */}
+                {/* Image carousel */}
                 <div className="flex min-h-[430px] items-center justify-center p-5 sm:p-8 lg:min-h-full lg:p-10">
                   <div
                     className="group/carousel relative flex h-[460px] w-full cursor-grab touch-pan-y select-none items-center justify-center overflow-hidden rounded-[1.6rem] border border-white/10 bg-black/60 p-4 active:cursor-grabbing sm:h-[520px] lg:h-[580px]"
@@ -555,9 +752,9 @@ export function ProjectsSection() {
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#09090B]/60 via-transparent to-transparent" />
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,245,212,0.05),_transparent_70%)]" />
 
-                    {project.confidential && (
+                    {"confidential" in project && project.confidential && (
                       <div className="absolute left-5 top-5 rounded-full border border-purple-500/30 bg-black/70 px-4 py-1.5 text-xs text-purple-300 backdrop-blur-md">
-                        Figma Concept UI
+                        {t.figmaBadge}
                       </div>
                     )}
 
@@ -566,12 +763,8 @@ export function ProjectsSection() {
                         <button
                           type="button"
                           aria-label="Previous image"
-                          onPointerDown={(event) =>
-                            event.stopPropagation()
-                          }
-                          onPointerUp={(event) =>
-                            event.stopPropagation()
-                          }
+                          onPointerDown={(event) => event.stopPropagation()}
+                          onPointerUp={(event) => event.stopPropagation()}
                           onClick={(event) => {
                             event.stopPropagation()
                             changeImage("previous")
@@ -584,12 +777,8 @@ export function ProjectsSection() {
                         <button
                           type="button"
                           aria-label="Next image"
-                          onPointerDown={(event) =>
-                            event.stopPropagation()
-                          }
-                          onPointerUp={(event) =>
-                            event.stopPropagation()
-                          }
+                          onPointerDown={(event) => event.stopPropagation()}
+                          onPointerUp={(event) => event.stopPropagation()}
                           onClick={(event) => {
                             event.stopPropagation()
                             changeImage("next")
@@ -607,12 +796,8 @@ export function ProjectsSection() {
                           key={index}
                           type="button"
                           aria-label={`Show image ${index + 1}`}
-                          onPointerDown={(event) =>
-                            event.stopPropagation()
-                          }
-                          onPointerUp={(event) =>
-                            event.stopPropagation()
-                          }
+                          onPointerDown={(event) => event.stopPropagation()}
+                          onPointerUp={(event) => event.stopPropagation()}
                           onClick={(event) => {
                             event.stopPropagation()
                             selectImage(index)
@@ -643,11 +828,11 @@ export function ProjectsSection() {
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm text-zinc-300 transition hover:border-[#00F5D4]/40 hover:text-[#00F5D4]"
               >
                 <ArrowLeft size={18} />
-                Previous
+                {t.btnPrevious}
               </button>
 
               <p className="text-sm text-zinc-500">
-                {projectIndex + 1} / {projects.length}
+                {projectIndex + 1} / {projectsList.length}
               </p>
 
               <button
@@ -655,14 +840,14 @@ export function ProjectsSection() {
                 onClick={() => changeProject("next")}
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm text-zinc-300 transition hover:border-[#00F5D4]/40 hover:text-[#00F5D4]"
               >
-                Next
+                {t.btnNext}
                 <ArrowRight size={18} />
               </button>
             </div>
 
             {/* Project indicators */}
             <div className="mt-8 flex justify-center gap-2">
-              {projects.map((item, index) => (
+              {projectsList.map((item, index) => (
                 <button
                   key={item.title}
                   type="button"
